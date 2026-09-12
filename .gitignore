@@ -1,0 +1,18 @@
+# Arquivos do Windows
+Thumbs.db
+Desktop.ini
+
+# Arquivos do macOS
+.DS_Store
+
+# Configurações locais do VS Code
+.vscode/
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.log
+
+# Arquivos de backup
+*.bak
+*~
