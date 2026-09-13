@@ -1,0 +1,203 @@
+/* =========================================================
+   STARTLAMPIÃO
+   ACESSO DO RESTAURANTE
+   ========================================================= */
+
+.pagina-acesso-restaurante {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--laranja-claro),
+            #ffffff
+        );
+}
+
+
+.card-acesso {
+    width: 100%;
+
+    max-width: 520px;
+
+    padding: 32px;
+
+    border:
+        1px solid var(--borda);
+
+    border-radius: 18px;
+
+    background-color:
+        var(--branco);
+
+    box-shadow:
+        0 12px 32px rgba(0, 0, 0, 0.10);
+}
+
+
+.cabecalho-acesso {
+    margin-bottom: 24px;
+
+    text-align: center;
+}
+
+
+.logo-texto {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    padding: 8px 14px;
+
+    border-radius: 999px;
+
+    background-color:
+        var(--laranja);
+
+    color:
+        var(--preto);
+
+    font-weight: 800;
+}
+
+
+.cabecalho-acesso h1 {
+    margin-bottom: 8px;
+
+    font-size: 1.8rem;
+}
+
+
+.cabecalho-acesso p {
+    color:
+        var(--cinza);
+}
+
+
+.btn-validar,
+.btn-continuar {
+    width: 100%;
+}
+
+
+.dados-restaurante {
+    margin-top: 24px;
+}
+
+
+.divisor {
+    height: 1px;
+
+    margin-bottom: 22px;
+
+    background-color:
+        var(--borda);
+}
+
+
+.texto-validado {
+    margin-bottom: 4px;
+
+    color:
+        var(--cinza);
+}
+
+
+.dados-restaurante h2 {
+    margin-bottom: 18px;
+
+    color:
+        var(--laranja-escuro);
+}
+
+
+.informacoes-restaurante {
+    display: grid;
+
+    gap: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+.informacoes-restaurante div {
+    padding: 14px;
+
+    border:
+        1px solid var(--borda);
+
+    border-radius: 10px;
+
+    background-color:
+        #fafafa;
+}
+
+
+.informacoes-restaurante span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color:
+        var(--cinza);
+
+    font-size: 0.82rem;
+}
+
+
+.informacoes-restaurante strong {
+    display: block;
+
+    overflow-wrap: anywhere;
+}
+
+
+.acoes-secundarias {
+    margin-top: 22px;
+
+    text-align: center;
+}
+
+
+.link-voltar {
+    color:
+        var(--laranja-escuro);
+
+    font-weight: 700;
+}
+
+
+.link-voltar:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 600px) {
+
+    .pagina-acesso-restaurante {
+        align-items: flex-start;
+
+        padding-top: 24px;
+    }
+
+
+    .card-acesso {
+        padding: 22px;
+
+        border-radius: 14px;
+    }
+
+
+    .cabecalho-acesso h1 {
+        font-size: 1.5rem;
+    }
+
+}

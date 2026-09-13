@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Categorias | StartLampião
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/categorias_restaurante.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="pagina-categorias">
+
+        <aside class="menu-lateral">
+
+            <div class="marca-restaurante">
+
+                <div class="icone-marca">
+                    SL
+                </div>
+
+                <div>
+
+                    <strong>
+                        StartLampião
+                    </strong>
+
+                    <span>
+                        Restaurante
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <nav class="menu">
+
+                <a
+                    href="dashboard.html"
+                    class="item-menu"
+                >
+                    Dashboard
+                </a>
+
+                <a
+                    href="categorias.html"
+                    class="item-menu ativo"
+                >
+                    Categorias
+                </a>
+
+                <a
+                    href="cardapio.html"
+                    class="item-menu"
+                >
+                    Cardápio
+                </a>
+
+                <span class="item-menu desabilitado">
+                    Pedidos
+                </span>
+
+                <span class="item-menu desabilitado">
+                    Entregas
+                </span>
+
+                <span class="item-menu desabilitado">
+                    Fidelidade
+                </span>
+
+            </nav>
+
+
+            <button
+                type="button"
+                class="btn-sair"
+                id="btnSair"
+            >
+                Sair
+            </button>
+
+        </aside>
+
+
+        <section class="conteudo">
+
+            <header class="topo">
+
+                <div>
+
+                    <p class="subtitulo">
+                        Área do Restaurante
+                    </p>
+
+                    <h1>
+                        Categorias
+                    </h1>
+
+                    <p
+                        id="nomeRestaurante"
+                        class="nome-restaurante"
+                    >
+                        Carregando restaurante...
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="dashboard.html"
+                    class="btn btn-secundario"
+                >
+                    Voltar ao Dashboard
+                </a>
+
+            </header>
+
+
+            <div
+                id="mensagem"
+                class="mensagem"
+                role="alert"
+                aria-live="polite"
+            ></div>
+
+
+            <div class="grade-categorias">
+
+                <section class="card formulario-card">
+
+                    <h2>
+                        Nova categoria
+                    </h2>
+
+                    <p class="texto-apoio">
+                        Crie as categorias que organizarão o cardápio do restaurante.
+                    </p>
+
+
+                    <form
+                        id="formCategoria"
+                        novalidate
+                    >
+
+                        <div class="form-grupo">
+
+                            <label for="nomeCategoria">
+                                Nome da categoria
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nomeCategoria"
+                                maxlength="60"
+                                placeholder="Ex.: Pratos principais"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-grupo">
+
+                            <label for="descricaoCategoria">
+                                Descrição
+                            </label>
+
+                            <textarea
+                                id="descricaoCategoria"
+                                maxlength="180"
+                                placeholder="Ex.: Refeições completas e pratos regionais."
+                            ></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primario btn-cadastrar"
+                            id="btnCadastrar"
+                        >
+                            Cadastrar categoria
+                        </button>
+
+                    </form>
+
+                </section>
+
+
+                <section class="card lista-card">
+
+                    <div class="cabecalho-lista">
+
+                        <div>
+
+                            <h2>
+                                Categorias cadastradas
+                            </h2>
+
+                            <p>
+                                Total:
+                                <strong id="totalCategorias">
+                                    0
+                                </strong>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="listaCategorias"
+                        class="lista-categorias"
+                    >
+
+                        <p class="estado-vazio">
+                            Nenhuma categoria cadastrada ainda.
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../js/storage.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/restaurante/categorias.js"></script>
+
+</body>
+
+</html>

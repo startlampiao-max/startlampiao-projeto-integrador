@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Dashboard do Restaurante | StartLampião
+    </title>
+
+    <!-- CSS GLOBAL DO PROJETO -->
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <!-- ESTILO UTILIZADO PELO DASHBOARD -->
+    <link
+        rel="stylesheet"
+        href="../css/admin.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="conteudo-principal">
+
+        <div class="container">
+
+
+            <!-- =========================================
+                 IDENTIFICAÇÃO DO RESTAURANTE
+            ========================================== -->
+
+            <section class="card">
+
+                <p>
+                    Área do Restaurante
+                </p>
+
+                <h1 id="nomeRestaurante">
+                    StartLampião
+                </h1>
+
+                <p id="textoBoasVindas">
+                    Carregando...
+                </p>
+
+
+                <!-- =====================================
+                     AÇÕES DO RESTAURANTE
+                ====================================== -->
+
+                <div
+                    style="
+                        margin-top: 20px;
+                        display: flex;
+                        gap: 12px;
+                        flex-wrap: wrap;
+                    "
+                >
+
+                    <a
+                        href="categorias.html"
+                        class="btn btn-primario"
+                    >
+                        Categorias
+                    </a>
+
+
+                    <a
+                        href="cardapio.html"
+                        class="btn btn-primario"
+                    >
+                        Cardápio
+                    </a>
+
+
+                    <a
+                        href="pedidos.html"
+                        class="btn btn-primario"
+                    >
+                        Pedidos
+                    </a>
+
+
+                    <a
+                        href="entregadores.html"
+                        class="btn btn-primario"
+                    >
+                        Entregadores
+                    </a>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-primario"
+                        id="btnSair"
+                    >
+                        Sair
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================================
+                 RESUMO OPERACIONAL
+            ========================================== -->
+
+            <section
+                class="card"
+                style="margin-top: 24px;"
+            >
+
+                <p>
+                    Visão geral
+                </p>
+
+                <h2>
+                    Resumo operacional
+                </h2>
+
+                <p>
+                    Acompanhe rapidamente a situação
+                    atual do restaurante.
+                </p>
+
+
+                <!-- =====================================
+                     CARDS DO RESUMO
+                ====================================== -->
+
+                <div
+                    style="
+                        margin-top: 24px;
+                        display: grid;
+                        grid-template-columns:
+                            repeat(
+                                auto-fit,
+                                minmax(180px, 1fr)
+                            );
+                        gap: 16px;
+                    "
+                >
+
+
+                    <!-- AGUARDANDO CONFIRMAÇÃO -->
+
+                    <article
+                        style="
+                            padding: 20px;
+                            border: 1px solid #eeeeee;
+                            border-radius: 14px;
+                            background: #ffffff;
+                        "
+                    >
+
+                        <p>
+                            Aguardando confirmação
+                        </p>
+
+                        <strong
+                            id="totalAguardando"
+                            style="
+                                display: block;
+                                margin-top: 8px;
+                                font-size: 32px;
+                            "
+                        >
+                            0
+                        </strong>
+
+                    </article>
+
+
+                    <!-- EM PREPARO -->
+
+                    <article
+                        style="
+                            padding: 20px;
+                            border: 1px solid #eeeeee;
+                            border-radius: 14px;
+                            background: #ffffff;
+                        "
+                    >
+
+                        <p>
+                            Em preparo
+                        </p>
+
+                        <strong
+                            id="totalPreparo"
+                            style="
+                                display: block;
+                                margin-top: 8px;
+                                font-size: 32px;
+                            "
+                        >
+                            0
+                        </strong>
+
+                    </article>
+
+
+                    <!-- PRONTOS -->
+
+                    <article
+                        style="
+                            padding: 20px;
+                            border: 1px solid #eeeeee;
+                            border-radius: 14px;
+                            background: #ffffff;
+                        "
+                    >
+
+                        <p>
+                            Pedidos prontos
+                        </p>
+
+                        <strong
+                            id="totalProntos"
+                            style="
+                                display: block;
+                                margin-top: 8px;
+                                font-size: 32px;
+                            "
+                        >
+                            0
+                        </strong>
+
+                    </article>
+
+
+                    <!-- ENTREGADORES DISPONÍVEIS -->
+
+                    <article
+                        style="
+                            padding: 20px;
+                            border: 1px solid #eeeeee;
+                            border-radius: 14px;
+                            background: #ffffff;
+                        "
+                    >
+
+                        <p>
+                            Entregadores disponíveis
+                        </p>
+
+                        <strong
+                            id="totalEntregadoresDisponiveis"
+                            style="
+                                display: block;
+                                margin-top: 8px;
+                                font-size: 32px;
+                            "
+                        >
+                            0
+                        </strong>
+
+                    </article>
+
+                </div>
+
+
+                <!-- =====================================
+                     ATALHOS
+                ====================================== -->
+
+                <div
+                    style="
+                        margin-top: 24px;
+                        display: flex;
+                        gap: 12px;
+                        flex-wrap: wrap;
+                    "
+                >
+
+                    <a
+                        href="pedidos.html"
+                        class="btn btn-primario"
+                    >
+                        Ver pedidos
+                    </a>
+
+                    <a
+                        href="entregadores.html"
+                        class="btn btn-primario"
+                    >
+                        Ver entregadores
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =============================================
+         JAVASCRIPT
+         MANTER ESTA ORDEM
+    ============================================== -->
+
+    <script src="../js/storage.js"></script>
+
+    <script src="../js/utils.js"></script>
+
+    <script src="../js/auth.js"></script>
+
+    <script src="../js/restaurante/dashboard.js"></script>
+
+</body>
+
+</html>

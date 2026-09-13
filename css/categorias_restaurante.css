@@ -1,0 +1,383 @@
+/* =========================================================
+   STARTLAMPIÃO
+   CATEGORIAS DO RESTAURANTE
+   ========================================================= */
+
+body {
+    background-color: var(--cinza-claro);
+}
+
+
+.pagina-categorias {
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns:
+        280px
+        1fr;
+}
+
+
+/* =========================================================
+   MENU LATERAL
+   ========================================================= */
+
+.menu-lateral {
+    min-height: 100vh;
+
+    padding: 24px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background-color:
+        var(--preto);
+
+    color:
+        var(--branco);
+}
+
+
+.marca-restaurante {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding-bottom: 24px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+.icone-marca {
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background-color:
+        var(--laranja);
+
+    color:
+        var(--preto);
+
+    font-weight: 800;
+}
+
+
+.marca-restaurante strong {
+    display: block;
+
+    font-size: 1.1rem;
+}
+
+
+.marca-restaurante span {
+    display: block;
+
+    margin-top: 2px;
+
+    color:
+        #cccccc;
+
+    font-size: 0.9rem;
+}
+
+
+.menu {
+    margin-top: 24px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.item-menu {
+    padding: 13px 14px;
+
+    border-radius: 8px;
+
+    color:
+        var(--branco);
+
+    transition:
+        background-color 0.2s ease;
+}
+
+
+.item-menu:hover {
+    background-color:
+        rgba(255, 255, 255, 0.08);
+}
+
+
+.item-menu.ativo {
+    background-color:
+        var(--laranja);
+
+    color:
+        var(--preto);
+
+    font-weight: 700;
+}
+
+
+.item-menu.desabilitado {
+    opacity: 0.45;
+
+    cursor: default;
+}
+
+
+.btn-sair {
+    margin-top: auto;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color:
+        var(--laranja);
+
+    color:
+        var(--preto);
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CONTEÚDO
+   ========================================================= */
+
+.conteudo {
+    padding: 32px;
+}
+
+
+.topo {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 24px;
+}
+
+
+.subtitulo {
+    color:
+        var(--cinza);
+}
+
+
+.topo h1 {
+    margin-top: 4px;
+
+    font-size: 2rem;
+}
+
+
+.nome-restaurante {
+    margin-top: 4px;
+
+    color:
+        var(--laranja-escuro);
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   GRADE
+   ========================================================= */
+
+.grade-categorias {
+    display: grid;
+
+    grid-template-columns:
+        minmax(320px, 420px)
+        1fr;
+
+    gap: 24px;
+
+    align-items: start;
+}
+
+
+.formulario-card h2,
+.lista-card h2 {
+    margin-bottom: 6px;
+}
+
+
+.texto-apoio {
+    margin-bottom: 22px;
+
+    color:
+        var(--cinza);
+}
+
+
+.btn-cadastrar {
+    width: 100%;
+}
+
+
+/* =========================================================
+   LISTA DE CATEGORIAS
+   ========================================================= */
+
+.cabecalho-lista {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+.cabecalho-lista p {
+    color:
+        var(--cinza);
+}
+
+
+.lista-categorias {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.categoria-item {
+    padding: 16px;
+
+    border:
+        1px solid var(--borda);
+
+    border-radius: 10px;
+
+    background-color:
+        #fafafa;
+}
+
+
+.categoria-item h3 {
+    margin-bottom: 5px;
+
+    color:
+        var(--preto);
+}
+
+
+.categoria-item p {
+    color:
+        var(--cinza);
+}
+
+
+.categoria-status {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 4px 10px;
+
+    border-radius: 999px;
+
+    background-color:
+        #d1e7dd;
+
+    color:
+        #0f5132;
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+}
+
+
+.estado-vazio {
+    padding: 28px;
+
+    border:
+        1px dashed #cccccc;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    color:
+        var(--cinza);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .pagina-categorias {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .menu-lateral {
+        min-height: auto;
+    }
+
+
+    .btn-sair {
+        margin-top: 24px;
+    }
+
+
+    .grade-categorias {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .conteudo {
+        padding: 20px 16px;
+    }
+
+
+    .topo {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}
