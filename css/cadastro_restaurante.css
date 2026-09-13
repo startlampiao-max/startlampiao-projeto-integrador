@@ -1,0 +1,82 @@
+/* =========================================================
+   STARTLAMPIÃO
+   CADASTRO DE RESTAURANTE
+   ========================================================= */
+
+.formulario-restaurante {
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+
+.cabecalho-formulario {
+    margin-bottom: 24px;
+}
+
+
+.cabecalho-formulario h2 {
+    margin-bottom: 6px;
+
+    font-size: 1.4rem;
+}
+
+
+.cabecalho-formulario p {
+    color: var(--cinza);
+}
+
+
+.grade-formulario {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 0 20px;
+}
+
+
+.campo-duplo {
+    grid-column: 1 / -1;
+}
+
+
+.acoes-formulario {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    margin-top: 10px;
+
+    padding-top: 22px;
+
+    border-top:
+        1px solid var(--borda);
+}
+
+
+@media (max-width: 760px) {
+
+    .grade-formulario {
+        grid-template-columns: 1fr;
+    }
+
+
+    .campo-duplo {
+        grid-column: auto;
+    }
+
+
+    .acoes-formulario {
+        flex-direction: column-reverse;
+    }
+
+
+    .acoes-formulario .btn {
+        width: 100%;
+    }
+
+}

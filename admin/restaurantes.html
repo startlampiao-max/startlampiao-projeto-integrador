@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Gerenciamento de restaurantes parceiros do StartLampião."
+    >
+
+    <title>
+        Restaurantes | StartLampião
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/admin.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="layout-admin">
+
+        <!-- =================================================
+             MENU LATERAL
+             ================================================= -->
+
+        <aside class="menu-lateral">
+
+            <div class="marca-admin">
+
+                <div class="logo-admin">
+                    SL
+                </div>
+
+                <div>
+
+                    <strong>
+                        StartLampião
+                    </strong>
+
+                    <span>
+                        Administração
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <nav
+                class="navegacao-admin"
+                aria-label="Menu administrativo"
+            >
+
+                <a
+                    href="dashboard.html"
+                    class="menu-link"
+                >
+                    Dashboard
+                </a>
+
+
+                <a
+                    href="restaurantes.html"
+                    class="menu-link ativo"
+                >
+                    Restaurantes
+                </a>
+
+
+                <a
+                    href="pedidos.html"
+                    class="menu-link"
+                >
+                    Pedidos
+                </a>
+
+
+                <a
+                    href="clientes.html"
+                    class="menu-link"
+                >
+                    Clientes
+                </a>
+
+
+                <a
+                    href="entregadores.html"
+                    class="menu-link"
+                >
+                    Entregadores
+                </a>
+
+
+                <a
+                    href="relatorios.html"
+                    class="menu-link"
+                >
+                    Relatórios
+                </a>
+
+
+                <a
+                    href="configuracoes.html"
+                    class="menu-link"
+                >
+                    Configurações
+                </a>
+
+            </nav>
+
+
+            <button
+                type="button"
+                class="btn-sair"
+                id="btnSair"
+            >
+                Sair
+            </button>
+
+        </aside>
+
+
+        <!-- =================================================
+             CONTEÚDO PRINCIPAL
+             ================================================= -->
+
+        <main class="area-admin">
+
+            <header class="topo-admin">
+
+                <div>
+
+                    <p class="texto-pequeno">
+                        Administração
+                    </p>
+
+                    <h1>
+                        Restaurantes
+                    </h1>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn btn-primario"
+                    id="btnNovoRestaurante"
+                >
+                    + Cadastrar restaurante
+                </button>
+
+            </header>
+
+
+            <!-- =================================================
+                 MENSAGEM
+                 ================================================= -->
+
+            <div
+                id="mensagem"
+                class="mensagem"
+                role="alert"
+                aria-live="polite"
+            ></div>
+
+
+            <!-- =================================================
+                 RESUMO
+                 ================================================= -->
+
+            <section class="resumo-restaurantes">
+
+                <article class="card resumo-item">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="totalRestaurantes">
+                        0
+                    </strong>
+
+                </article>
+
+
+                <article class="card resumo-item">
+
+                    <span>
+                        Pendentes
+                    </span>
+
+                    <strong id="totalPendentes">
+                        0
+                    </strong>
+
+                </article>
+
+
+                <article class="card resumo-item">
+
+                    <span>
+                        Aprovados
+                    </span>
+
+                    <strong id="totalAprovados">
+                        0
+                    </strong>
+
+                </article>
+
+            </section>
+
+
+            <!-- =================================================
+                 LISTAGEM
+                 ================================================= -->
+
+            <section class="card secao-restaurantes">
+
+                <div class="cabecalho-secao">
+
+                    <div>
+
+                        <h2>
+                            Restaurantes cadastrados
+                        </h2>
+
+                        <p>
+                            Aprove os estabelecimentos e gere
+                            o código de acesso do restaurante.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="listaRestaurantes"
+                    class="lista-restaurantes"
+                >
+
+                    <div class="lista-vazia">
+                        Carregando restaurantes...
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+         ORDEM DOS SCRIPTS
+         ===================================================== -->
+
+    <script src="../js/storage.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/admin/restaurantes.js"></script>
+
+</body>
+
+</html>

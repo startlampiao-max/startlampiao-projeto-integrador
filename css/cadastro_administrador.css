@@ -1,0 +1,112 @@
+/* =========================================================
+   STARTLAMPIÃO
+   CADASTRO DO ADMINISTRADOR
+   ========================================================= */
+
+
+.pagina-cadastro {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--laranja-claro),
+            #ffffff
+        );
+}
+
+
+.card-cadastro {
+    width: 100%;
+
+    max-width: 520px;
+
+    background-color: var(--branco);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 18px;
+
+    padding: 32px;
+
+    box-shadow:
+        0 12px 32px rgba(0, 0, 0, 0.10);
+}
+
+
+.cabecalho-cadastro {
+    text-align: center;
+
+    margin-bottom: 24px;
+}
+
+
+.logo-texto {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    padding: 8px 14px;
+
+    border-radius: 999px;
+
+    background-color: var(--laranja);
+
+    color: var(--preto);
+
+    font-size: 1rem;
+
+    font-weight: 800;
+}
+
+
+.cabecalho-cadastro h1 {
+    margin-bottom: 8px;
+
+    font-size: 1.8rem;
+
+    color: var(--preto);
+}
+
+
+.cabecalho-cadastro p {
+    color: var(--cinza);
+}
+
+
+.btn-cadastrar {
+    width: 100%;
+
+    margin-top: 8px;
+}
+
+
+@media (max-width: 600px) {
+
+    .pagina-cadastro {
+        align-items: flex-start;
+
+        padding-top: 24px;
+    }
+
+
+    .card-cadastro {
+        padding: 22px;
+
+        border-radius: 14px;
+    }
+
+
+    .cabecalho-cadastro h1 {
+        font-size: 1.5rem;
+    }
+
+}
