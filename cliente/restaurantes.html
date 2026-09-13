@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Encontre restaurantes disponíveis no StartLampião."
+    >
+
+    <title>
+        Restaurantes | StartLampião
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/restaurantes_cliente.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         CABEÇALHO
+         ===================================================== -->
+
+    <header class="cabecalho-cliente">
+
+        <div class="container cabecalho-conteudo">
+
+            <div class="marca-cliente">
+
+                <div class="icone-marca">
+                    SL
+                </div>
+
+                <div>
+
+                    <strong>
+                        StartLampião
+                    </strong>
+
+                    <span>
+                        Delivery
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="acoes-cabecalho">
+
+                <!--
+                    O JavaScript atualizará esta área
+                    conforme o cliente esteja ou não logado.
+                -->
+
+                <a
+                    href="meus_pedidos.html"
+                    class="btn btn-secundario"
+                >
+                    Meus Pedidos
+                </a>
+
+                <a
+                    href="../login.html"
+                    class="btn btn-secundario"
+                >
+                    Entrar
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+         ===================================================== -->
+
+    <main>
+
+        <section class="hero-restaurantes">
+
+            <div class="container">
+
+                <p class="subtitulo">
+                    StartLampião
+                </p>
+
+                <h1>
+                    Escolha seu restaurante
+                </h1>
+
+                <p class="texto-apoio">
+                    Encontre restaurantes, conheça os cardápios
+                    e escolha o que deseja pedir.
+                </p>
+
+
+                <div class="campo-busca">
+
+                    <label
+                        for="buscaRestaurante"
+                        class="sr-only"
+                    >
+                        Buscar restaurante
+                    </label>
+
+                    <input
+                        type="search"
+                        id="buscaRestaurante"
+                        placeholder="Buscar restaurante..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             RESTAURANTES
+             ================================================= -->
+
+        <section class="secao-restaurantes">
+
+            <div class="container">
+
+                <div class="cabecalho-secao">
+
+                    <div>
+
+                        <h2>
+                            Restaurantes disponíveis
+                        </h2>
+
+                        <p>
+                            Escolha um restaurante para visualizar
+                            categorias e produtos.
+                        </p>
+
+                    </div>
+
+
+                    <div class="contador-restaurantes">
+
+                        <span>
+                            Total:
+                        </span>
+
+                        <strong id="totalRestaurantes">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================================
+                     MENSAGEM
+                     ========================================= -->
+
+                <div
+                    id="mensagem"
+                    class="mensagem"
+                    role="alert"
+                    aria-live="polite"
+                ></div>
+
+
+                <!-- =========================================
+                     LISTA GERADA PELO JAVASCRIPT
+                     ========================================= -->
+
+                <div
+                    id="listaRestaurantes"
+                    class="grade-restaurantes"
+                >
+
+                    <div class="estado-vazio">
+
+                        <p>
+                            Carregando restaurantes...
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         RODAPÉ
+         ===================================================== -->
+
+    <footer class="rodape">
+
+        <div class="container">
+
+            <p>
+                StartLampião — Sabor que te conecta.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         SCRIPTS
+         MANTER ESTA ORDEM
+         ===================================================== -->
+
+    <script src="../js/storage.js"></script>
+
+    <script src="../js/utils.js"></script>
+
+    <script src="../js/auth.js"></script>
+
+    <script src="../js/cliente/restaurantes.js"></script>
+
+</body>
+
+</html>

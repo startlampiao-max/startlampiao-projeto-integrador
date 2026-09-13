@@ -1,0 +1,395 @@
+/* =====================================================
+   STARTLAMPIÃO
+   MEUS PEDIDOS - CLIENTE
+===================================================== */
+
+
+/* =====================================================
+   CABEÇALHO
+===================================================== */
+
+.cabecalho {
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.cabecalho-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.subtitulo {
+    margin: 0 0 4px;
+    color: #666666;
+    font-size: 14px;
+}
+
+.cabecalho h1 {
+    margin: 0;
+    color: #222222;
+}
+
+.acoes-cabecalho {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+/* =====================================================
+   CONTEÚDO
+===================================================== */
+
+.conteudo-principal {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+
+/* =====================================================
+   PAINEL DO CLIENTE
+===================================================== */
+
+.painel-cliente {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.painel-cliente p {
+    margin-top: 0;
+    color: #666666;
+}
+
+.painel-cliente h2 {
+    margin: 6px 0 10px;
+    color: #222222;
+}
+
+
+/* =====================================================
+   MENSAGEM
+===================================================== */
+
+.mensagem {
+    margin-bottom: 20px;
+}
+
+.oculto {
+    display: none !important;
+}
+
+
+/* =====================================================
+   RESUMO
+===================================================== */
+
+.resumo-pedidos {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(180px, 1fr)
+    );
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.resumo-card {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.resumo-card span {
+    display: block;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+.resumo-card strong {
+    display: block;
+    color: #222222;
+    font-size: 32px;
+}
+
+
+/* =====================================================
+   FILTRO
+===================================================== */
+
+.painel-filtro {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.painel-filtro label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #222222;
+}
+
+.painel-filtro select {
+    width: 100%;
+    max-width: 320px;
+    min-height: 44px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 0 12px;
+    background: #ffffff;
+    color: #222222;
+}
+
+
+/* =====================================================
+   LISTA
+===================================================== */
+
+.lista-pedidos {
+    display: grid;
+    gap: 20px;
+}
+
+
+/* =====================================================
+   CARD DO PEDIDO
+===================================================== */
+
+.pedido-card {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.pedido-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.pedido-cabecalho h2 {
+    margin: 0 0 6px;
+    color: #222222;
+    font-size: 20px;
+}
+
+.pedido-data {
+    margin: 0;
+    color: #666666;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status-aguardando {
+    background: #fff7e6;
+    color: #d97706;
+}
+
+.status-confirmado {
+    background: #eef6ff;
+    color: #2563eb;
+}
+
+.status-preparando {
+    background: #fff7e6;
+    color: #d97706;
+}
+
+.status-pronto {
+    background: #eefbf3;
+    color: #15803d;
+}
+
+.status-entrega {
+    background: #f3e8ff;
+    color: #7e22ce;
+}
+
+.status-entregue {
+    background: #eefbf3;
+    color: #15803d;
+}
+
+.status-cancelado {
+    background: #fff1f2;
+    color: #be123c;
+}
+
+
+/* =====================================================
+   CORPO DO PEDIDO
+===================================================== */
+
+.pedido-corpo {
+    display: grid;
+    grid-template-columns: repeat(
+        2,
+        minmax(0, 1fr)
+    );
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.bloco-pedido h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #222222;
+}
+
+.bloco-pedido p {
+    margin: 6px 0;
+    color: #555555;
+}
+
+
+/* =====================================================
+   ITENS
+===================================================== */
+
+.lista-itens {
+    display: grid;
+    gap: 10px;
+}
+
+.item-pedido {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.item-pedido:last-child {
+    border-bottom: none;
+}
+
+.item-pedido strong {
+    color: #222222;
+}
+
+.item-pedido span {
+    color: #222222;
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   TOTAL
+===================================================== */
+
+.valor-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding-top: 16px;
+    margin-top: 12px;
+    border-top: 1px solid #eeeeee;
+}
+
+.valor-total strong {
+    font-size: 20px;
+    color: #222222;
+}
+
+
+/* =====================================================
+   ENTREGADOR
+===================================================== */
+
+.dados-entregador {
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 12px;
+    background: #fff7e6;
+}
+
+.dados-entregador strong {
+    color: #222222;
+}
+
+
+/* =====================================================
+   ESTADO VAZIO
+===================================================== */
+
+.estado-vazio {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 16px;
+    padding: 36px 24px;
+    text-align: center;
+}
+
+.estado-vazio h2 {
+    margin-top: 0;
+    color: #222222;
+}
+
+.estado-vazio p {
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (
+    max-width: 760px
+) {
+
+    .cabecalho-conteudo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .acoes-cabecalho {
+        width: 100%;
+    }
+
+    .acoes-cabecalho .btn {
+        flex: 1;
+        text-align: center;
+    }
+
+    .pedido-cabecalho {
+        flex-direction: column;
+    }
+
+    .pedido-corpo {
+        grid-template-columns: 1fr;
+    }
+
+}ss

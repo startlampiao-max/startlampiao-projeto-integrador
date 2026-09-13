@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Carrinho de compras do StartLampião."
+    >
+
+    <title>
+        Carrinho | StartLampião
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/carrinho_cliente.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         CABEÇALHO
+         ===================================================== -->
+
+    <header class="cabecalho-cliente">
+
+        <div class="container cabecalho-conteudo">
+
+            <a
+                href="restaurantes.html"
+                class="marca-cliente"
+            >
+
+                <div class="icone-marca">
+                    SL
+                </div>
+
+                <div>
+
+                    <strong>
+                        StartLampião
+                    </strong>
+
+                    <span>
+                        Delivery
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <div class="acoes-cabecalho">
+
+                <a
+                    href="restaurantes.html"
+                    class="btn btn-secundario"
+                >
+                    Restaurantes
+                </a>
+
+                <a
+                    href="meus_pedidos.html"
+                    class="btn btn-secundario"
+                >
+                    Meus Pedidos
+                </a>
+
+                <a
+                    href="cardapio.html"
+                    class="btn btn-secundario"
+                >
+                    Cardápio
+                </a>
+
+                <div id="areaAcessoCliente">
+
+                    <a
+                        href="../login.html"
+                        class="btn btn-primario"
+                    >
+                        Entrar
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTEÚDO
+         ===================================================== -->
+
+    <main>
+
+        <section class="hero-carrinho">
+
+            <div class="container">
+
+                <p class="subtitulo">
+                    Seu pedido
+                </p>
+
+                <h1>
+                    Carrinho
+                </h1>
+
+                <p
+                    id="nomeRestaurante"
+                    class="texto-apoio"
+                >
+                    Carregando restaurante...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="secao-carrinho">
+
+            <div class="container">
+
+                <!-- =========================================
+                     MENSAGEM
+                     ========================================= -->
+
+                <div
+                    id="mensagem"
+                    class="mensagem"
+                    role="alert"
+                    aria-live="polite"
+                ></div>
+
+
+                <div class="grade-carrinho">
+
+                    <!-- =====================================
+                         ITENS
+                         ===================================== -->
+
+                    <section class="card carrinho-itens">
+
+                        <div class="cabecalho-secao">
+
+                            <div>
+
+                                <h2>
+                                    Itens do carrinho
+                                </h2>
+
+                                <p>
+                                    Revise os produtos antes de continuar.
+                                </p>
+
+                            </div>
+
+
+                            <div class="contador-itens">
+
+                                <span>
+                                    Itens:
+                                </span>
+
+                                <strong id="totalItens">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="listaCarrinho"
+                            class="lista-carrinho"
+                        >
+
+                            <p class="estado-vazio">
+                                Seu carrinho está vazio.
+                            </p>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- =====================================
+                         RESUMO
+                         ===================================== -->
+
+                    <aside class="card resumo-carrinho">
+
+                        <h2>
+                            Resumo
+                        </h2>
+
+
+                        <div class="linha-resumo">
+
+                            <span>
+                                Subtotal
+                            </span>
+
+                            <strong id="subtotalCarrinho">
+                                R$ 0,00
+                            </strong>
+
+                        </div>
+
+
+                        <div class="linha-resumo total">
+
+                            <span>
+                                Total
+                            </span>
+
+                            <strong id="totalCarrinho">
+                                R$ 0,00
+                            </strong>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-primario btn-finalizar"
+                            id="btnFinalizar"
+                        >
+                            Continuar pedido
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-secundario btn-limpar"
+                            id="btnLimpar"
+                        >
+                            Limpar carrinho
+                        </button>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         RODAPÉ
+         ===================================================== -->
+
+    <footer class="rodape">
+
+        <div class="container">
+
+            <p>
+                StartLampião — Sabor que te conecta.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         SCRIPTS
+         MANTER ESTA ORDEM
+         ===================================================== -->
+
+    <script src="../js/storage.js"></script>
+
+    <script src="../js/utils.js"></script>
+
+    <script src="../js/auth.js"></script>
+
+    <script src="../js/cliente/carrinho.js"></script>
+
+</body>
+
+</html>

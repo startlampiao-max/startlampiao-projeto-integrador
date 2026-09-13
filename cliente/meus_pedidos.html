@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Meus Pedidos | StartLampião
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/meus_pedidos_cliente.css"
+    >
+
+</head>
+
+
+<body>
+
+    <header class="cabecalho">
+
+        <div class="container cabecalho-conteudo">
+
+            <div>
+
+                <p class="subtitulo">
+                    Área do Cliente
+                </p>
+
+                <h1>
+                    Meus Pedidos
+                </h1>
+
+            </div>
+
+
+            <div class="acoes-cabecalho">
+
+                <a
+                    href="restaurantes.html"
+                    class="btn btn-secundario"
+                >
+                    Restaurantes
+                </a>
+
+                <button
+                    type="button"
+                    class="btn btn-secundario"
+                    id="btnAtualizar"
+                >
+                    Atualizar
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-primario"
+                    id="btnSair"
+                >
+                    Sair
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="conteudo-principal">
+
+        <div class="container">
+
+
+            <!-- =========================================
+                 IDENTIFICAÇÃO DO CLIENTE
+            ========================================== -->
+
+            <section class="painel-cliente">
+
+                <p>
+                    Cliente conectado
+                </p>
+
+                <h2 id="nomeCliente">
+                    Carregando...
+                </h2>
+
+                <p>
+                    Acompanhe aqui o andamento dos seus pedidos.
+                </p>
+
+            </section>
+
+
+            <!-- =========================================
+                 MENSAGENS
+            ========================================== -->
+
+            <div
+                id="mensagem"
+                class="mensagem oculto"
+                role="alert"
+            ></div>
+
+
+            <!-- =========================================
+                 RESUMO
+            ========================================== -->
+
+            <section class="resumo-pedidos">
+
+                <article class="resumo-card">
+
+                    <span>
+                        Total de pedidos
+                    </span>
+
+                    <strong id="totalPedidos">
+                        0
+                    </strong>
+
+                </article>
+
+
+                <article class="resumo-card">
+
+                    <span>
+                        Em andamento
+                    </span>
+
+                    <strong id="totalEmAndamento">
+                        0
+                    </strong>
+
+                </article>
+
+
+                <article class="resumo-card">
+
+                    <span>
+                        Entregues
+                    </span>
+
+                    <strong id="totalEntregues">
+                        0
+                    </strong>
+
+                </article>
+
+            </section>
+
+
+            <!-- =========================================
+                 FILTRO
+            ========================================== -->
+
+            <section class="painel-filtro">
+
+                <label for="filtroStatus">
+                    Filtrar pedidos
+                </label>
+
+                <select id="filtroStatus">
+
+                    <option value="todos">
+                        Todos
+                    </option>
+
+                    <option value="em_andamento">
+                        Em andamento
+                    </option>
+
+                    <option value="entregue">
+                        Entregues
+                    </option>
+
+                    <option value="cancelado">
+                        Cancelados
+                    </option>
+
+                </select>
+
+            </section>
+
+
+            <!-- =========================================
+                 LISTA DE PEDIDOS
+            ========================================== -->
+
+            <section
+                id="listaPedidos"
+                class="lista-pedidos"
+            ></section>
+
+
+            <!-- =========================================
+                 ESTADO VAZIO
+            ========================================== -->
+
+            <section
+                id="estadoVazio"
+                class="estado-vazio oculto"
+            >
+
+                <h2>
+                    Nenhum pedido encontrado
+                </h2>
+
+                <p>
+                    Quando você realizar um pedido,
+                    ele aparecerá aqui.
+                </p>
+
+                <a
+                    href="restaurantes.html"
+                    class="btn btn-primario"
+                >
+                    Ver restaurantes
+                </a>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- =============================================
+         JAVASCRIPT
+         MANTER ESTA ORDEM
+    ============================================== -->
+
+    <script src="../js/storage.js"></script>
+
+    <script src="../js/utils.js"></script>
+
+    <script src="../js/auth.js"></script>
+
+    <script src="../js/cliente/meus_pedidos.js"></script>
+
+</body>
+
+</html>

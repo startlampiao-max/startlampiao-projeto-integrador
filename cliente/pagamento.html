@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Pagamento do pedido no StartLampião."
+    >
+
+    <title>
+        Pagamento | StartLampião
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/pagamento_cliente.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         CABEÇALHO
+         ===================================================== -->
+
+    <header class="cabecalho-cliente">
+
+        <div class="container cabecalho-conteudo">
+
+            <a
+                href="restaurantes.html"
+                class="marca-cliente"
+            >
+
+                <div class="icone-marca">
+                    SL
+                </div>
+
+                <div>
+
+                    <strong>
+                        StartLampião
+                    </strong>
+
+                    <span>
+                        Delivery
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <div class="acoes-cabecalho">
+
+                <a
+                    href="restaurantes.html"
+                    class="btn btn-secundario"
+                >
+                    Restaurantes
+                </a>
+
+                <a
+                    href="carrinho.html"
+                    class="btn btn-secundario"
+                >
+                    Carrinho
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTEÚDO
+         ===================================================== -->
+
+    <main>
+
+        <section class="hero-pagamento">
+
+            <div class="container">
+
+                <p class="subtitulo">
+                    Finalização
+                </p>
+
+                <h1>
+                    Pagamento
+                </h1>
+
+                <p class="texto-apoio">
+                    Escolha como deseja pagar seu pedido.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="secao-pagamento">
+
+            <div class="container">
+
+                <div
+                    id="mensagem"
+                    class="mensagem"
+                    role="alert"
+                    aria-live="polite"
+                ></div>
+
+
+                <div class="grade-pagamento">
+
+                    <!-- =====================================
+                         FORMAS DE PAGAMENTO
+                         ===================================== -->
+
+                    <section class="card pagamento-card">
+
+                        <div class="cabecalho-secao">
+
+                            <div>
+
+                                <h2>
+                                    Forma de pagamento
+                                </h2>
+
+                                <p>
+                                    Selecione uma das opções abaixo.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <form
+                            id="formPagamento"
+                            class="formulario-pagamento"
+                        >
+
+                            <!-- PIX -->
+
+                            <label class="opcao-pagamento">
+
+                                <input
+                                    type="radio"
+                                    name="formaPagamento"
+                                    value="pix_whatsapp"
+                                >
+
+                                <div>
+
+                                    <strong>
+                                        Pix pelo WhatsApp
+                                    </strong>
+
+                                    <p>
+                                        Após confirmar o pedido,
+                                        você poderá continuar pelo WhatsApp
+                                        para realizar o pagamento via Pix.
+                                    </p>
+
+                                </div>
+
+                            </label>
+
+
+                            <!-- DINHEIRO -->
+
+                            <label class="opcao-pagamento">
+
+                                <input
+                                    type="radio"
+                                    name="formaPagamento"
+                                    value="dinheiro"
+                                >
+
+                                <div>
+
+                                    <strong>
+                                        Dinheiro na entrega
+                                    </strong>
+
+                                    <p>
+                                        O pagamento será realizado
+                                        no momento da entrega do pedido.
+                                    </p>
+
+                                </div>
+
+                            </label>
+
+
+                            <!-- TROCO -->
+
+                            <div
+                                id="areaTroco"
+                                class="area-troco oculto"
+                            >
+
+                                <div class="campo">
+
+                                    <label for="trocoPara">
+                                        Precisa de troco para quanto?
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="trocoPara"
+                                        name="trocoPara"
+                                        placeholder="Ex.: 50.00"
+                                        min="0"
+                                        step="0.01"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- AÇÕES -->
+
+                            <div class="acoes-formulario">
+
+                                <button
+                                    type="submit"
+                                    class="btn btn-primario btn-confirmar"
+                                    id="btnConfirmar"
+                                >
+                                    Confirmar pedido
+                                </button>
+
+
+                                <a
+                                    href="endereco.html"
+                                    class="btn btn-secundario btn-voltar"
+                                >
+                                    Voltar ao endereço
+                                </a>
+
+                            </div>
+
+                        </form>
+
+                    </section>
+
+
+                    <!-- =====================================
+                         RESUMO DO PEDIDO
+                         ===================================== -->
+
+                    <aside class="card resumo-pagamento">
+
+                        <h2>
+                            Resumo do pedido
+                        </h2>
+
+
+                        <p class="resumo-texto">
+                            Restaurante
+                        </p>
+
+                        <strong id="nomeRestaurante">
+                            Carregando...
+                        </strong>
+
+
+                        <div class="linha-resumo">
+
+                            <span>
+                                Itens
+                            </span>
+
+                            <strong id="totalItens">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="linha-resumo total">
+
+                            <span>
+                                Total
+                            </span>
+
+                            <strong id="totalPedido">
+                                R$ 0,00
+                            </strong>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         RODAPÉ
+         ===================================================== -->
+
+    <footer class="rodape">
+
+        <div class="container">
+
+            <p>
+                StartLampião — Sabor que te conecta.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         SCRIPTS
+         ===================================================== -->
+
+    <script src="../js/storage.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/cliente/pagamento.js"></script>
+
+</body>
+
+</html>
