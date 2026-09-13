@@ -1,0 +1,665 @@
+/* =========================================================
+   STARTLAMPIÃO
+   PEDIDOS DO RESTAURANTE
+   ========================================================= */
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.cabecalho-restaurante {
+    background-color: var(--branco);
+    border-bottom: 1px solid var(--borda);
+}
+
+.cabecalho-conteudo {
+    min-height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.marca-restaurante {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    color: var(--preto);
+}
+
+.icone-marca {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background-color: var(--laranja);
+
+    color: var(--preto);
+
+    font-weight: 900;
+}
+
+.marca-texto strong {
+    display: block;
+
+    font-size: 1.05rem;
+}
+
+.marca-texto span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--cinza);
+
+    font-size: 0.92rem;
+}
+
+.acoes-cabecalho {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+
+.btn-sair {
+    border: none;
+
+    background-color: #b42318;
+
+    color: #ffffff;
+
+    cursor: pointer;
+}
+
+.btn-atualizar {
+    border: none;
+
+    background-color: var(--laranja);
+
+    color: var(--preto);
+
+    cursor: pointer;
+}
+
+.btn-sair:hover,
+.btn-atualizar:hover {
+    filter: brightness(0.96);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero-pedidos {
+    padding: 46px 0;
+
+    background-color: var(--laranja-claro);
+}
+
+.hero-pedidos .subtitulo {
+    margin-bottom: 8px;
+
+    color: var(--laranja-escuro);
+
+    font-weight: 800;
+}
+
+.hero-pedidos h1 {
+    margin: 0 0 12px;
+
+    color: var(--preto);
+
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.texto-apoio {
+    margin: 0;
+
+    color: var(--cinza);
+
+    font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   SEÇÃO
+   ========================================================= */
+
+.secao-pedidos {
+    min-height: 500px;
+
+    padding: 36px 0 60px;
+
+    background-color: var(--cinza-claro);
+}
+
+
+/* =========================================================
+   TOPO
+   ========================================================= */
+
+.topo-pedidos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 24px;
+}
+
+.rotulo-restaurante {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--cinza);
+
+    font-size: 0.9rem;
+}
+
+.topo-pedidos h2 {
+    margin: 0;
+
+    color: var(--preto);
+}
+
+
+/* =========================================================
+   RESUMO
+   ========================================================= */
+
+.resumo-pedidos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-bottom: 28px;
+}
+
+.card-resumo {
+    padding: 22px;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 16px;
+
+    background-color: var(--branco);
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.05);
+}
+
+.card-resumo span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--cinza);
+
+    font-size: 0.92rem;
+}
+
+.card-resumo strong {
+    color: var(--preto);
+
+    font-size: 2rem;
+}
+
+
+/* =========================================================
+   FILTROS
+   ========================================================= */
+
+.filtros-pedidos {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 24px;
+}
+
+.filtros-pedidos label {
+    color: var(--preto);
+
+    font-weight: 700;
+}
+
+.filtros-pedidos select {
+    min-width: 240px;
+
+    padding: 12px 14px;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 10px;
+
+    background-color: var(--branco);
+
+    color: var(--preto);
+
+    font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   LISTA DE PEDIDOS
+   ========================================================= */
+
+.lista-pedidos {
+    display: grid;
+
+    gap: 20px;
+}
+
+.pedido-card {
+    overflow: hidden;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 18px;
+
+    background-color: var(--branco);
+
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.06);
+}
+
+.pedido-cabecalho {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px 22px;
+
+    background-color: #fffaf1;
+
+    border-bottom: 1px solid var(--borda);
+}
+
+.pedido-numero {
+    margin: 0 0 6px;
+
+    color: var(--preto);
+
+    font-size: 1.05rem;
+}
+
+.pedido-data {
+    margin: 0;
+
+    color: var(--cinza);
+
+    font-size: 0.9rem;
+}
+
+.status {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 7px 11px;
+
+    border-radius: 999px;
+
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.status-aguardando {
+    background-color: #fff3d6;
+
+    color: #9a5b00;
+}
+
+.status-confirmado {
+    background-color: #e7f0ff;
+
+    color: #2458a6;
+}
+
+.status-preparando {
+    background-color: #fde8c8;
+
+    color: #9b5400;
+}
+
+.status-pronto {
+    background-color: #dff3e8;
+
+    color: #08783f;
+}
+
+.status-entrega {
+    background-color: #e4ecff;
+
+    color: #384b9c;
+}
+
+.status-entregue {
+    background-color: #dff3e8;
+
+    color: #08783f;
+}
+
+.status-cancelado {
+    background-color: #fde6e4;
+
+    color: #b42318;
+}
+
+
+/* =========================================================
+   CORPO DO PEDIDO
+   ========================================================= */
+
+.pedido-corpo {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(260px, 1fr);
+
+    gap: 26px;
+
+    padding: 22px;
+}
+
+.bloco-pedido h3 {
+    margin: 0 0 12px;
+
+    color: var(--preto);
+
+    font-size: 1.05rem;
+}
+
+.bloco-pedido p {
+    margin: 6px 0;
+
+    color: var(--cinza);
+
+    line-height: 1.55;
+}
+
+.lista-itens {
+    display: grid;
+
+    gap: 10px;
+
+    margin-top: 12px;
+}
+
+.item-pedido {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 16px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid var(--borda);
+}
+
+.item-pedido:last-child {
+    border-bottom: none;
+}
+
+.item-pedido strong {
+    color: var(--preto);
+}
+
+.item-pedido span {
+    color: var(--cinza);
+}
+
+.valor-total {
+    margin-top: 18px;
+
+    padding-top: 16px;
+
+    border-top: 1px solid var(--borda);
+
+    display: flex;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.valor-total span {
+    color: var(--cinza);
+}
+
+.valor-total strong {
+    color: var(--laranja-escuro);
+
+    font-size: 1.25rem;
+}
+
+
+/* =========================================================
+   AÇÕES DO PEDIDO
+   ========================================================= */
+
+.acoes-pedido {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    padding: 0 22px 22px;
+}
+
+.acoes-pedido button {
+    padding: 11px 16px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.btn-aceitar {
+    background-color: #16794b;
+
+    color: #ffffff;
+}
+
+.btn-preparar {
+    background-color: var(--laranja);
+
+    color: var(--preto);
+}
+
+.btn-pronto {
+    background-color: #2458a6;
+
+    color: #ffffff;
+}
+
+.btn-cancelar {
+    background-color: #b42318;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   ESTADOS
+   ========================================================= */
+
+.estado-carregando,
+.estado-vazio {
+    padding: 40px 20px;
+
+    border: 1px dashed var(--borda);
+
+    border-radius: 16px;
+
+    background-color: var(--branco);
+
+    text-align: center;
+}
+
+.estado-carregando p,
+.estado-vazio p {
+    color: var(--cinza);
+}
+
+.estado-vazio h3 {
+    margin: 10px 0;
+
+    color: var(--preto);
+}
+
+.icone-vazio {
+    font-size: 2.4rem;
+}
+
+.oculto {
+    display: none !important;
+}
+
+
+/* =========================================================
+   MENSAGEM
+   ========================================================= */
+
+.mensagem:not(:empty) {
+    margin-bottom: 20px;
+
+    padding: 14px 16px;
+
+    border-radius: 10px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+.rodape {
+    padding: 24px 0;
+
+    background-color: var(--branco);
+
+    border-top: 1px solid var(--borda);
+
+    text-align: center;
+
+    color: var(--cinza);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 960px) {
+
+    .resumo-pedidos {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .pedido-corpo {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .cabecalho-conteudo,
+    .topo-pedidos {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .acoes-cabecalho {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .acoes-cabecalho .btn,
+    .acoes-cabecalho button {
+        width: 100%;
+    }
+
+    .hero-pedidos {
+        padding: 34px 0;
+    }
+
+    .secao-pedidos {
+        padding: 24px 0 40px;
+    }
+
+    .resumo-pedidos {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros-pedidos {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .filtros-pedidos select {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .pedido-cabecalho {
+        flex-direction: column;
+    }
+
+    .pedido-corpo {
+        padding: 18px;
+    }
+
+    .acoes-pedido {
+        flex-direction: column;
+
+        padding: 0 18px 18px;
+    }
+
+    .acoes-pedido button {
+        width: 100%;
+    }
+
+}

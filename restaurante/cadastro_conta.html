@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Criação da conta de acesso do restaurante no StartLampião.">
+    <title>Criar Conta do Restaurante | StartLampião</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/cadastro_conta_restaurante.css">
+</head>
+<body>
+    <main class="pagina-cadastro-restaurante">
+        <section class="card-cadastro-restaurante">
+            <header class="cabecalho-cadastro-restaurante">
+                <div class="selo-restaurante">StartLampião</div>
+                <h1>Criar conta do restaurante</h1>
+                <p>Defina os dados que serão usados para entrar na área do estabelecimento.</p>
+            </header>
+
+            <div id="mensagem" class="mensagem" role="alert" aria-live="polite"></div>
+
+            <div class="restaurante-identificado">
+                <p>Restaurante autorizado</p>
+                <strong id="nomeRestaurante">Carregando...</strong>
+            </div>
+
+            <form id="formCadastroContaRestaurante" novalidate>
+                <div class="form-grupo">
+                    <label for="email">E-mail de acesso</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" minlength="6" autocomplete="new-password" required>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="confirmarSenha">Confirmar senha</label>
+                    <input type="password" id="confirmarSenha" name="confirmarSenha" minlength="6" autocomplete="new-password" required>
+                </div>
+
+                <button type="submit" class="btn btn-primario btn-cadastrar-conta" id="btnCadastrar">
+                    Criar conta do restaurante
+                </button>
+            </form>
+
+            <a class="link-voltar" href="acesso.html">Voltar para validar outro código</a>
+        </section>
+    </main>
+
+    <script src="../js/storage.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/restaurante/cadastro_conta.js"></script>
+</body>
+</html>

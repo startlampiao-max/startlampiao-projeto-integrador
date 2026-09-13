@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Gerenciamento de pedidos do restaurante no StartLampião."
+    >
+
+    <title>
+        Pedidos do Restaurante | StartLampião
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/pedidos_restaurante.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         CABEÇALHO
+         ===================================================== -->
+
+    <header class="cabecalho-restaurante">
+
+        <div class="container cabecalho-conteudo">
+
+            <a
+                href="dashboard.html"
+                class="marca-restaurante"
+            >
+
+                <div class="icone-marca">
+                    SL
+                </div>
+
+                <div class="marca-texto">
+
+                    <strong>
+                        StartLampião
+                    </strong>
+
+                    <span>
+                        Área do Restaurante
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <div class="acoes-cabecalho">
+
+                <a
+                    href="dashboard.html"
+                    class="btn btn-secundario"
+                >
+                    Dashboard
+                </a>
+
+                <button
+                    type="button"
+                    class="btn btn-sair"
+                    id="btnSair"
+                >
+                    Sair
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+         ===================================================== -->
+
+    <main>
+
+        <!-- =================================================
+             HERO
+             ================================================= -->
+
+        <section class="hero-pedidos">
+
+            <div class="container">
+
+                <p class="subtitulo">
+                    Gerenciamento
+                </p>
+
+                <h1>
+                    Pedidos do restaurante
+                </h1>
+
+                <p class="texto-apoio">
+                    Acompanhe e atualize os pedidos recebidos.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PEDIDOS
+             ================================================= -->
+
+        <section class="secao-pedidos">
+
+            <div class="container">
+
+                <!-- =========================================
+                     IDENTIFICAÇÃO DO RESTAURANTE
+                     ========================================= -->
+
+                <div class="topo-pedidos">
+
+                    <div>
+
+                        <span class="rotulo-restaurante">
+                            Restaurante conectado
+                        </span>
+
+                        <h2 id="nomeRestaurante">
+                            Carregando restaurante...
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-atualizar"
+                        id="btnAtualizar"
+                    >
+                        Atualizar pedidos
+                    </button>
+
+                </div>
+
+
+                <!-- =========================================
+                     MENSAGENS
+                     ========================================= -->
+
+                <div
+                    id="mensagem"
+                    class="mensagem"
+                    role="alert"
+                    aria-live="polite"
+                ></div>
+
+
+                <!-- =========================================
+                     RESUMO
+                     ========================================= -->
+
+                <div class="resumo-pedidos">
+
+                    <article class="card-resumo">
+
+                        <span>
+                            Total de pedidos
+                        </span>
+
+                        <strong id="totalPedidos">
+                            0
+                        </strong>
+
+                    </article>
+
+
+                    <article class="card-resumo">
+
+                        <span>
+                            Aguardando confirmação
+                        </span>
+
+                        <strong id="totalAguardando">
+                            0
+                        </strong>
+
+                    </article>
+
+
+                    <article class="card-resumo">
+
+                        <span>
+                            Em preparo
+                        </span>
+
+                        <strong id="totalPreparo">
+                            0
+                        </strong>
+
+                    </article>
+
+
+                    <article class="card-resumo">
+
+                        <span>
+                            Prontos
+                        </span>
+
+                        <strong id="totalProntos">
+                            0
+                        </strong>
+
+                    </article>
+
+                </div>
+
+
+                <!-- =========================================
+                     FILTROS
+                     ========================================= -->
+
+                <div class="filtros-pedidos">
+
+                    <label for="filtroStatus">
+                        Filtrar por status
+                    </label>
+
+                    <select id="filtroStatus">
+
+                        <option value="todos">
+                            Todos os pedidos
+                        </option>
+
+                        <option value="aguardando_confirmacao">
+                            Aguardando confirmação
+                        </option>
+
+                        <option value="confirmado">
+                            Confirmados
+                        </option>
+
+                        <option value="preparando">
+                            Em preparo
+                        </option>
+
+                        <option value="pronto">
+                            Prontos
+                        </option>
+
+                        <option value="saiu_para_entrega">
+                            Saiu para entrega
+                        </option>
+
+                        <option value="entregue">
+                            Entregues
+                        </option>
+
+                        <option value="cancelado">
+                            Cancelados
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- =========================================
+                     LISTA DE PEDIDOS
+                     ========================================= -->
+
+                <div
+                    id="listaPedidos"
+                    class="lista-pedidos"
+                >
+
+                    <div class="estado-carregando">
+
+                        <p>
+                            Carregando pedidos...
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================================
+                     ESTADO VAZIO
+                     ========================================= -->
+
+                <div
+                    id="estadoVazio"
+                    class="estado-vazio oculto"
+                >
+
+                    <div class="icone-vazio">
+                        📋
+                    </div>
+
+                    <h3>
+                        Nenhum pedido encontrado
+                    </h3>
+
+                    <p>
+                        Quando um cliente fizer um pedido para este
+                        restaurante, ele aparecerá aqui.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         RODAPÉ
+         ===================================================== -->
+
+    <footer class="rodape">
+
+        <div class="container">
+
+            <p>
+                StartLampião — Área do Restaurante.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         SCRIPTS CENTRAIS
+         ===================================================== -->
+
+    <script src="../js/storage.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/auth.js"></script>
+
+    <!-- =====================================================
+         SCRIPT DA TELA
+         ===================================================== -->
+
+    <script src="../js/restaurante/pedidos.js"></script>
+
+</body>
+
+</html>

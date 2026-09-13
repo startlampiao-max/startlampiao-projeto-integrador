@@ -1,0 +1,648 @@
+/* =========================================================
+   STARTLAMPIÃO
+   ENTREGADORES DO RESTAURANTE
+   ========================================================= */
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.cabecalho {
+    background-color: var(--branco);
+    border-bottom: 1px solid var(--borda);
+}
+
+.cabecalho-conteudo {
+    min-height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.marca-icone {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background-color: var(--laranja);
+
+    color: var(--preto);
+
+    font-weight: 900;
+}
+
+.marca strong {
+    display: block;
+
+    color: var(--preto);
+
+    font-size: 1.05rem;
+}
+
+.marca span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--cinza);
+
+    font-size: 0.92rem;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.btn-sair {
+    border: none;
+
+    background-color: #b42318;
+
+    color: #ffffff;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    padding: 46px 0;
+
+    background-color: var(--laranja-claro);
+}
+
+.hero-etiqueta {
+    margin-bottom: 8px;
+
+    color: var(--laranja-escuro);
+
+    font-weight: 800;
+}
+
+.hero h1 {
+    margin: 0 0 12px;
+
+    color: var(--preto);
+
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.hero p:last-child {
+    margin: 0;
+
+    color: var(--cinza);
+
+    font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   CONTEÚDO
+   ========================================================= */
+
+.conteudo-principal {
+    min-height: 500px;
+
+    padding: 36px 0 60px;
+
+    background-color: var(--cinza-claro);
+}
+
+.restaurante-identificacao {
+    margin-bottom: 24px;
+}
+
+.restaurante-identificacao span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--cinza);
+
+    font-size: 0.9rem;
+}
+
+.restaurante-identificacao h2 {
+    margin: 0;
+
+    color: var(--preto);
+}
+
+
+/* =========================================================
+   RESUMO
+   ========================================================= */
+
+.resumo-entregadores {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-bottom: 28px;
+}
+
+.resumo-card {
+    padding: 22px;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 16px;
+
+    background-color: var(--branco);
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.05);
+}
+
+.resumo-card span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--cinza);
+
+    font-size: 0.92rem;
+}
+
+.resumo-card strong {
+    color: var(--preto);
+
+    font-size: 2rem;
+}
+
+
+/* =========================================================
+   PAINÉIS
+   ========================================================= */
+
+.painel {
+    margin-bottom: 28px;
+
+    padding: 26px;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 18px;
+
+    background-color: var(--branco);
+
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.06);
+}
+
+.painel-cabecalho {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 22px;
+}
+
+.painel-etiqueta {
+    margin: 0 0 6px;
+
+    color: var(--laranja-escuro);
+
+    font-weight: 800;
+}
+
+.painel h2 {
+    margin: 0 0 8px;
+
+    color: var(--preto);
+}
+
+.painel-cabecalho p:last-child {
+    margin: 0;
+
+    color: var(--cinza);
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+   ========================================================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.campo-grande {
+    grid-column: 1 / -1;
+}
+
+.campo label {
+    color: var(--preto);
+
+    font-weight: 700;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 10px;
+
+    background-color: var(--branco);
+
+    color: var(--preto);
+
+    font: inherit;
+}
+
+.campo input:focus,
+.campo select:focus {
+    outline: 2px solid rgba(245, 158, 11, 0.22);
+
+    border-color: var(--laranja);
+}
+
+.acoes-formulario {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 22px;
+}
+
+
+/* =========================================================
+   FILTRO
+   ========================================================= */
+
+.filtro {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.filtro label {
+    color: var(--preto);
+
+    font-weight: 700;
+}
+
+.filtro select {
+    min-width: 190px;
+
+    padding: 11px 13px;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 9px;
+
+    background-color: var(--branco);
+
+    color: var(--preto);
+}
+
+
+/* =========================================================
+   LISTA DE ENTREGADORES
+   ========================================================= */
+
+.lista-entregadores {
+    display: grid;
+
+    gap: 16px;
+}
+
+.entregador-card {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.4fr)
+        minmax(220px, 0.8fr)
+        auto;
+
+    gap: 20px;
+
+    align-items: center;
+
+    padding: 20px;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 14px;
+
+    background-color: #fffaf1;
+}
+
+.entregador-info h3 {
+    margin: 0 0 8px;
+
+    color: var(--preto);
+}
+
+.entregador-info p,
+.entregador-veiculo p {
+    margin: 4px 0;
+
+    color: var(--cinza);
+}
+
+.entregador-info strong,
+.entregador-veiculo strong {
+    color: var(--preto);
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.status-entregador {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 11px;
+
+    border-radius: 999px;
+
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.status-disponivel {
+    background-color: #dff3e8;
+
+    color: #08783f;
+}
+
+.status-em-entrega {
+    background-color: #fde8c8;
+
+    color: #9b5400;
+}
+
+.status-indisponivel {
+    background-color: #fde6e4;
+
+    color: #b42318;
+}
+
+
+/* =========================================================
+   AÇÕES DO ENTREGADOR
+   ========================================================= */
+
+.entregador-acoes {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.entregador-acoes button {
+    min-width: 150px;
+
+    padding: 10px 14px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.btn-disponivel {
+    background-color: #16794b;
+
+    color: #ffffff;
+}
+
+.btn-indisponivel {
+    background-color: #b42318;
+
+    color: #ffffff;
+}
+
+.btn-remover {
+    background-color: #242424;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   ESTADO VAZIO
+   ========================================================= */
+
+.estado-vazio {
+    padding: 42px 20px;
+
+    border: 1px dashed var(--borda);
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    background-color: var(--branco);
+}
+
+.estado-vazio-icone {
+    margin-bottom: 10px;
+
+    font-size: 2.5rem;
+}
+
+.estado-vazio h3 {
+    margin: 0 0 8px;
+
+    color: var(--preto);
+}
+
+.estado-vazio p {
+    margin: 0;
+
+    color: var(--cinza);
+}
+
+
+/* =========================================================
+   MENSAGENS
+   ========================================================= */
+
+.mensagem:not(:empty) {
+    margin-bottom: 20px;
+
+    padding: 14px 16px;
+
+    border-radius: 10px;
+
+    font-weight: 700;
+}
+
+.oculto {
+    display: none !important;
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+.rodape {
+    padding: 24px 0;
+
+    background-color: var(--branco);
+
+    border-top: 1px solid var(--borda);
+
+    text-align: center;
+
+    color: var(--cinza);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 960px) {
+
+    .resumo-entregadores {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .entregador-card {
+        grid-template-columns: 1fr;
+    }
+
+    .entregador-acoes {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .cabecalho-conteudo {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    .menu {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .menu .btn,
+    .menu button {
+        width: 100%;
+    }
+
+    .hero {
+        padding: 34px 0;
+    }
+
+    .conteudo-principal {
+        padding: 24px 0 40px;
+    }
+
+    .resumo-entregadores {
+        grid-template-columns: 1fr;
+    }
+
+    .painel {
+        padding: 20px;
+    }
+
+    .painel-cabecalho {
+        flex-direction: column;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-grande {
+        grid-column: auto;
+    }
+
+    .filtro {
+        width: 100%;
+
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+    .filtro select {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .acoes-formulario {
+        flex-direction: column;
+    }
+
+    .acoes-formulario .btn,
+    .acoes-formulario button {
+        width: 100%;
+    }
+
+    .entregador-acoes {
+        flex-direction: column;
+    }
+
+    .entregador-acoes button {
+        width: 100%;
+    }
+
+}
