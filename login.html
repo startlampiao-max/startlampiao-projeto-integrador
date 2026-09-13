@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Acesse sua conta no StartLampião."
+    >
+
+    <title>
+        Login | StartLampião
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/login.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================
+         CABEÇALHO
+    ====================================== -->
+
+    <header class="cabecalho">
+
+        <div class="container cabecalho-conteudo">
+
+            <button
+                type="button"
+                class="marca"
+                id="btnInicio"
+                aria-label="Voltar para página inicial"
+            >
+
+                <img
+                    src="imagens/logo-lampiao.png"
+                    alt="StartLampião - Sabor que te conecta"
+                >
+
+            </button>
+
+
+            <button
+                type="button"
+                class="btn-explorar"
+                id="btnExplorar"
+            >
+                ← Continuar explorando
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================
+         CONTEÚDO
+    ====================================== -->
+
+    <main class="pagina-login">
+
+        <div class="container login-layout">
+
+
+            <!-- =================================
+                 LADO VISUAL
+            ================================== -->
+
+            <section class="login-apresentacao">
+
+                <div class="apresentacao-conteudo">
+
+                    <span class="etiqueta">
+                        StartLampião
+                    </span>
+
+
+                    <h1>
+
+                        Seu pedido está
+
+                        <span>
+                            quase lá.
+                        </span>
+
+                    </h1>
+
+
+                    <p>
+
+                        Entre na sua conta para continuar
+                        sua compra, acompanhar pedidos e
+                        aproveitar todos os recursos do
+                        StartLampião.
+
+                    </p>
+
+
+                    <div class="vantagens">
+
+                        <article>
+
+                            <span class="vantagem-icone">
+                                🍴
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Muitos restaurantes
+                                </strong>
+
+                                <p>
+                                    Vários estabelecimentos
+                                    em uma única plataforma.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+
+                        <article>
+
+                            <span class="vantagem-icone">
+                                🛒
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Seu pedido continua salvo
+                                </strong>
+
+                                <p>
+                                    Se você veio do carrinho,
+                                    retornaremos ao seu pedido
+                                    depois do login.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+
+                        <article>
+
+                            <span class="vantagem-icone">
+                                📦
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Acompanhe seus pedidos
+                                </strong>
+
+                                <p>
+                                    Veja cada etapa depois
+                                    da confirmação da compra.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <div class="logo-destaque">
+
+                    <img
+                        src="imagens/logo-lampiao.png"
+                        alt="Logo StartLampião"
+                    >
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 FORMULÁRIO
+            ================================== -->
+
+            <section class="login-card">
+
+                <div class="login-topo">
+
+                    <span class="mini-titulo">
+                        Bem-vindo de volta
+                    </span>
+
+                    <h2>
+                        Entrar no StartLampião
+                    </h2>
+
+                    <p>
+                        Informe seus dados para continuar.
+                    </p>
+
+                </div>
+
+
+                <!-- PERFIL -->
+
+                <div class="tipo-acesso">
+
+                    <p>
+                        Entrar como:
+                    </p>
+
+                    <div
+                        class="tipos"
+                        role="group"
+                        aria-label="Tipo de acesso"
+                    >
+
+                        <button
+                            type="button"
+                            class="tipo-btn ativo"
+                            data-tipo="cliente"
+                        >
+                            👤 Cliente
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="tipo-btn"
+                            data-tipo="restaurante"
+                        >
+                            🍽️ Restaurante
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="tipo-btn"
+                            data-tipo="administrador"
+                        >
+                            ⚙️ Administrador
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <form
+                    id="formLogin"
+                    novalidate
+                >
+
+
+                    <!-- E-MAIL -->
+
+                    <div class="grupo-campo">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <div class="campo-com-icone">
+
+                            <span>
+                                ✉️
+                            </span>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                autocomplete="email"
+                                placeholder="seuemail@exemplo.com"
+                                required
+                            >
+
+                        </div>
+
+                        <small
+                            class="erro-campo"
+                            id="erroEmail"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- SENHA -->
+
+                    <div class="grupo-campo">
+
+                        <div class="label-linha">
+
+                            <label for="senha">
+                                Senha
+                            </label>
+
+                            <button
+                                type="button"
+                                class="esqueci-senha"
+                                id="btnEsqueciSenha"
+                            >
+                                Esqueci minha senha
+                            </button>
+
+                        </div>
+
+
+                        <div class="campo-com-icone">
+
+                            <span>
+                                🔒
+                            </span>
+
+                            <input
+                                type="password"
+                                id="senha"
+                                name="senha"
+                                autocomplete="current-password"
+                                placeholder="Digite sua senha"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="mostrar-senha"
+                                id="btnMostrarSenha"
+                                aria-label="Mostrar senha"
+                            >
+                                👁️
+                            </button>
+
+                        </div>
+
+                        <small
+                            class="erro-campo"
+                            id="erroSenha"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- LEMBRAR -->
+
+                    <label class="lembrar">
+
+                        <input
+                            type="checkbox"
+                            id="lembrar"
+                        >
+
+                        <span>
+                            Manter minha conta conectada
+                        </span>
+
+                    </label>
+
+
+                    <!-- MENSAGEM -->
+
+                    <div
+                        id="mensagemLogin"
+                        class="mensagem-login oculto"
+                        role="alert"
+                        aria-live="polite"
+                    ></div>
+
+
+                    <!-- ENTRAR -->
+
+                    <button
+                        type="submit"
+                        class="btn-login"
+                        id="btnLogin"
+                    >
+
+                        <span>
+                            Entrar
+                        </span>
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </form>
+
+
+                <!-- DIVISOR -->
+
+                <div class="divisor">
+
+                    <span></span>
+
+                    <p>
+                        Ainda não tem conta?
+                    </p>
+
+                    <span></span>
+
+                </div>
+
+
+                <!-- CADASTRO -->
+
+                <button
+                    type="button"
+                    class="btn-criar-conta"
+                    id="btnCriarConta"
+                >
+                    Criar conta de cliente
+                </button>
+
+
+                <p
+                    class="aviso-perfil"
+                    id="avisoPerfil"
+                >
+                    Clientes podem criar sua conta livremente.
+                </p>
+
+
+                <div class="seguranca">
+
+                    <span>
+                        🔐
+                    </span>
+
+                    <p>
+                        Seus dados serão protegidos.
+                        Nesta etapa do projeto, o login
+                        ainda é uma simulação no frontend.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================
+         RECUPERAÇÃO DE SENHA
+    ====================================== -->
+
+    <div
+        class="modal-fundo oculto"
+        id="modalSenha"
+    >
+
+        <section class="modal">
+
+            <button
+                type="button"
+                class="fechar-modal"
+                id="btnFecharSenha"
+            >
+                ×
+            </button>
+
+
+            <div class="modal-icone">
+                🔑
+            </div>
+
+
+            <h2>
+                Recuperar senha
+            </h2>
+
+
+            <p>
+                Quando conectarmos o backend,
+                enviaremos um link de recuperação
+                para o e-mail cadastrado.
+            </p>
+
+
+            <button
+                type="button"
+                class="btn-entendi"
+                id="btnEntendi"
+            >
+                Entendi
+            </button>
+
+        </section>
+
+    </div>
+
+
+    <!-- =====================================
+         RODAPÉ
+    ====================================== -->
+
+    <footer class="rodape">
+
+        <div class="container rodape-conteudo">
+
+            <div>
+
+                <strong>
+                    Start<span>Lampião</span>
+                </strong>
+
+                <small>
+                    Sabor que te conecta.
+                </small>
+
+            </div>
+
+            <p>
+                © <span id="anoAtual"></span>
+                StartLampião
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================
+         MÓDULOS CENTRAIS
+    ====================================== -->
+
+    <script src="js/storage.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+
+    <!-- LOGIN -->
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>
