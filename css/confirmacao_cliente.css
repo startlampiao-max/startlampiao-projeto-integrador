@@ -1,0 +1,426 @@
+/* =========================================================
+   STARTLAMPIÃO
+   CONFIRMAÇÃO DO PEDIDO - CLIENTE
+   ========================================================= */
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.cabecalho-cliente {
+    background-color: var(--branco);
+    border-bottom: 1px solid var(--borda);
+}
+
+.cabecalho-conteudo {
+    min-height: 84px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.marca-cliente {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+    color: var(--preto);
+}
+
+.icone-marca {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background-color: var(--laranja);
+
+    color: var(--preto);
+
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.marca-cliente strong {
+    display: block;
+
+    font-size: 1.05rem;
+}
+
+.marca-cliente span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--cinza);
+
+    font-size: 0.95rem;
+}
+
+.acoes-cabecalho {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero-confirmacao {
+    padding: 48px 0;
+
+    background-color: var(--laranja-claro);
+}
+
+.hero-confirmacao .subtitulo {
+    margin-bottom: 8px;
+
+    color: var(--laranja-escuro);
+
+    font-weight: 800;
+}
+
+.hero-confirmacao h1 {
+    margin: 0 0 12px;
+
+    color: var(--preto);
+
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.texto-apoio {
+    margin: 0;
+
+    color: var(--cinza);
+
+    font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   CONTEÚDO
+   ========================================================= */
+
+.secao-confirmacao {
+    min-height: 500px;
+
+    padding: 36px 0 60px;
+
+    background-color: var(--cinza-claro);
+}
+
+.grade-confirmacao {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 2fr)
+        minmax(280px, 1fr);
+
+    gap: 28px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.confirmacao-card,
+.entrega-card {
+    padding: 28px;
+
+    border-radius: 18px;
+
+    background-color: var(--branco);
+
+    border: 1px solid var(--borda);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.icone-sucesso {
+    width: 68px;
+    height: 68px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    background-color: #dff3e8;
+
+    color: #08783f;
+
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.confirmacao-card h2,
+.entrega-card h2 {
+    margin: 0 0 12px;
+
+    color: var(--preto);
+
+    font-size: 1.6rem;
+}
+
+.texto-confirmacao {
+    margin: 0 0 28px;
+
+    color: var(--cinza);
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   DADOS DO PEDIDO
+   ========================================================= */
+
+.dados-pedido {
+    overflow: hidden;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 14px;
+}
+
+.linha-dado {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 17px 18px;
+
+    border-bottom: 1px solid var(--borda);
+}
+
+.linha-dado:last-child {
+    border-bottom: none;
+}
+
+.linha-dado span {
+    color: var(--cinza);
+}
+
+.linha-dado strong {
+    color: var(--preto);
+
+    text-align: right;
+}
+
+.linha-dado.total {
+    background-color: var(--laranja-claro);
+}
+
+.linha-dado.total strong {
+    color: var(--laranja-escuro);
+
+    font-size: 1.35rem;
+}
+
+.status-pedido {
+    display: inline-block;
+
+    padding: 7px 10px;
+
+    border-radius: 999px;
+
+    background-color: var(--laranja-claro);
+
+    color: var(--laranja-escuro) !important;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   PAGAMENTO
+   ========================================================= */
+
+.area-pagamento {
+    margin-top: 24px;
+
+    padding: 20px;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 14px;
+
+    background-color: #fffaf1;
+}
+
+.area-pagamento h3 {
+    margin: 0 0 8px;
+
+    color: var(--preto);
+}
+
+.area-pagamento p {
+    margin: 0 0 16px;
+
+    color: var(--cinza);
+
+    line-height: 1.6;
+}
+
+.oculto {
+    display: none !important;
+}
+
+
+/* =========================================================
+   ENTREGA
+   ========================================================= */
+
+.entrega-card .rotulo {
+    margin: 22px 0 6px;
+
+    color: var(--cinza);
+
+    font-size: 0.9rem;
+}
+
+.entrega-card strong {
+    color: var(--preto);
+}
+
+#enderecoEntrega {
+    margin: 0;
+
+    color: var(--preto);
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   AÇÕES
+   ========================================================= */
+
+.acoes-confirmacao {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 26px;
+}
+
+.acoes-confirmacao .btn {
+    flex: 1;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   MENSAGEM
+   ========================================================= */
+
+.mensagem:not(:empty) {
+    margin-bottom: 22px;
+
+    padding: 15px 16px;
+
+    border-radius: 10px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+.rodape {
+    padding: 24px 0;
+
+    background-color: var(--branco);
+
+    border-top: 1px solid var(--borda);
+
+    text-align: center;
+
+    color: var(--cinza);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .grade-confirmacao {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .cabecalho-conteudo {
+        min-height: auto;
+
+        padding-top: 14px;
+        padding-bottom: 14px;
+
+        align-items: flex-start;
+    }
+
+    .acoes-cabecalho {
+        flex-direction: column;
+    }
+
+    .hero-confirmacao {
+        padding: 34px 0;
+    }
+
+    .secao-confirmacao {
+        padding: 24px 0 40px;
+    }
+
+    .confirmacao-card,
+    .entrega-card {
+        padding: 20px;
+    }
+
+    .linha-dado {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 6px;
+    }
+
+    .linha-dado strong {
+        text-align: left;
+    }
+
+    .acoes-confirmacao {
+        flex-direction: column;
+    }
+
+}

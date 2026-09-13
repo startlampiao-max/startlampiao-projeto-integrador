@@ -1,0 +1,441 @@
+/* =========================================================
+   STARTLAMPIÃO
+   ÁREA DO CLIENTE - RESTAURANTES
+   ========================================================= */
+
+body {
+    background-color: var(--cinza-claro);
+    color: var(--preto);
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.cabecalho-cliente {
+    background-color: var(--branco);
+
+    border-bottom:
+        1px solid var(--borda);
+}
+
+
+.cabecalho-conteudo {
+    min-height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.marca-cliente {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.icone-marca {
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background-color:
+        var(--laranja);
+
+    color:
+        var(--preto);
+
+    font-weight: 800;
+}
+
+
+.marca-cliente strong {
+    display: block;
+
+    font-size: 1.05rem;
+}
+
+
+.marca-cliente span {
+    display: block;
+
+    margin-top: 2px;
+
+    color:
+        var(--cinza);
+
+    font-size: 0.88rem;
+}
+
+
+.acoes-cabecalho {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero-restaurantes {
+    padding:
+        48px 0 32px;
+
+    background-color:
+        var(--laranja-claro);
+}
+
+
+.hero-restaurantes h1 {
+    margin-top: 6px;
+
+    font-size:
+        clamp(2rem, 5vw, 3rem);
+
+    line-height: 1.1;
+}
+
+
+.subtitulo {
+    color:
+        var(--laranja-escuro);
+
+    font-weight: 800;
+}
+
+
+.texto-apoio {
+    max-width: 700px;
+
+    margin-top: 12px;
+
+    color:
+        var(--cinza);
+
+    line-height: 1.6;
+}
+
+
+.campo-busca {
+    max-width: 620px;
+
+    margin-top: 24px;
+}
+
+
+.campo-busca input {
+    width: 100%;
+
+    padding:
+        15px 16px;
+
+    border:
+        1px solid var(--borda);
+
+    border-radius: 10px;
+
+    background-color:
+        var(--branco);
+
+    color:
+        var(--preto);
+
+    font-size: 1rem;
+
+    outline: none;
+}
+
+
+.campo-busca input:focus {
+    border-color:
+        var(--laranja);
+}
+
+
+/* =========================================================
+   SEÇÃO DE RESTAURANTES
+   ========================================================= */
+
+.secao-restaurantes {
+    padding:
+        36px 0 56px;
+}
+
+
+.cabecalho-secao {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    gap: 20px;
+
+    margin-bottom: 24px;
+}
+
+
+.cabecalho-secao h2 {
+    margin-bottom: 6px;
+
+    font-size: 1.7rem;
+}
+
+
+.cabecalho-secao p {
+    color:
+        var(--cinza);
+}
+
+
+.contador-restaurantes {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding:
+        8px 12px;
+
+    border-radius: 999px;
+
+    background-color:
+        var(--branco);
+
+    border:
+        1px solid var(--borda);
+}
+
+
+.grade-restaurantes {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(260px, 1fr)
+        );
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   CARD DO RESTAURANTE
+   ========================================================= */
+
+.restaurante-card {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    padding: 20px;
+
+    border:
+        1px solid var(--borda);
+
+    border-radius: 14px;
+
+    background-color:
+        var(--branco);
+
+    box-shadow:
+        0 10px 24px
+        rgba(0, 0, 0, 0.05);
+}
+
+
+.restaurante-card h3 {
+    font-size: 1.3rem;
+
+    color:
+        var(--preto);
+}
+
+
+.restaurante-card p {
+    color:
+        var(--cinza);
+
+    line-height: 1.5;
+}
+
+
+.restaurante-detalhes {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.tag-restaurante {
+    display: inline-block;
+
+    padding:
+        5px 10px;
+
+    border-radius: 999px;
+
+    background-color:
+        var(--laranja-claro);
+
+    color:
+        var(--laranja-escuro);
+
+    font-size:
+        0.82rem;
+
+    font-weight:
+        700;
+}
+
+
+.restaurante-acoes {
+    margin-top: auto;
+
+    padding-top: 8px;
+}
+
+
+.btn-ver-cardapio {
+    width: 100%;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   ESTADO VAZIO
+   ========================================================= */
+
+.estado-vazio {
+    grid-column:
+        1 / -1;
+
+    padding: 34px;
+
+    border:
+        1px dashed #cccccc;
+
+    border-radius: 12px;
+
+    background-color:
+        var(--branco);
+
+    text-align: center;
+
+    color:
+        var(--cinza);
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+.rodape {
+    padding:
+        22px 0;
+
+    border-top:
+        1px solid var(--borda);
+
+    background-color:
+        var(--branco);
+
+    text-align: center;
+
+    color:
+        var(--cinza);
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+   ========================================================= */
+
+.sr-only {
+    position: absolute;
+
+    width: 1px;
+
+    height: 1px;
+
+    padding: 0;
+
+    margin: -1px;
+
+    overflow: hidden;
+
+    clip:
+        rect(0, 0, 0, 0);
+
+    white-space: nowrap;
+
+    border: 0;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .cabecalho-conteudo {
+        min-height: auto;
+
+        padding-top: 14px;
+
+        padding-bottom: 14px;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .cabecalho-secao {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .hero-restaurantes {
+        padding-top: 34px;
+    }
+
+}

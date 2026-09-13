@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Confirmação do pedido no StartLampião."
+    >
+
+    <title>
+        Pedido Confirmado | StartLampião
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/confirmacao_cliente.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         CABEÇALHO
+         ===================================================== -->
+
+    <header class="cabecalho-cliente">
+
+        <div class="container cabecalho-conteudo">
+
+            <a
+                href="restaurantes.html"
+                class="marca-cliente"
+            >
+
+                <div class="icone-marca">
+                    SL
+                </div>
+
+                <div>
+
+                    <strong>
+                        StartLampião
+                    </strong>
+
+                    <span>
+                        Delivery
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <div class="acoes-cabecalho">
+
+                <a
+                    href="restaurantes.html"
+                    class="btn btn-secundario"
+                >
+                    Restaurantes
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTEÚDO
+         ===================================================== -->
+
+    <main>
+
+        <section class="hero-confirmacao">
+
+            <div class="container">
+
+                <p class="subtitulo">
+                    Pedido realizado
+                </p>
+
+                <h1>
+                    Pedido confirmado
+                </h1>
+
+                <p class="texto-apoio">
+                    Seu pedido foi registrado com sucesso no StartLampião.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="secao-confirmacao">
+
+            <div class="container">
+
+                <div
+                    id="mensagem"
+                    class="mensagem"
+                    role="alert"
+                    aria-live="polite"
+                ></div>
+
+
+                <div class="grade-confirmacao">
+
+                    <!-- =====================================
+                         DADOS DO PEDIDO
+                         ===================================== -->
+
+                    <section class="card confirmacao-card">
+
+                        <div class="icone-sucesso">
+                            ✓
+                        </div>
+
+
+                        <h2>
+                            Obrigado pelo seu pedido!
+                        </h2>
+
+
+                        <p class="texto-confirmacao">
+                            O restaurante recebeu sua solicitação
+                            e poderá iniciar o preparo do pedido.
+                        </p>
+
+
+                        <div class="dados-pedido">
+
+                            <div class="linha-dado">
+
+                                <span>
+                                    Número do pedido
+                                </span>
+
+                                <strong id="numeroPedido">
+                                    Carregando...
+                                </strong>
+
+                            </div>
+
+
+                            <div class="linha-dado">
+
+                                <span>
+                                    Restaurante
+                                </span>
+
+                                <strong id="nomeRestaurante">
+                                    Carregando...
+                                </strong>
+
+                            </div>
+
+
+                            <div class="linha-dado">
+
+                                <span>
+                                    Forma de pagamento
+                                </span>
+
+                                <strong id="formaPagamento">
+                                    Carregando...
+                                </strong>
+
+                            </div>
+
+
+                            <div class="linha-dado">
+
+                                <span>
+                                    Status
+                                </span>
+
+                                <strong
+                                    id="statusPedido"
+                                    class="status-pedido"
+                                >
+                                    Aguardando confirmação
+                                </strong>
+
+                            </div>
+
+
+                            <div class="linha-dado total">
+
+                                <span>
+                                    Total
+                                </span>
+
+                                <strong id="totalPedido">
+                                    R$ 0,00
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =================================
+                             PIX
+                             ================================= -->
+
+                        <div
+                            id="areaPix"
+                            class="area-pagamento oculto"
+                        >
+
+                            <h3>
+                                Pagamento via Pix
+                            </h3>
+
+                            <p>
+                                Para concluir o pagamento,
+                                continue pelo WhatsApp do restaurante.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="btn btn-primario"
+                                id="btnWhatsapp"
+                            >
+                                Abrir WhatsApp
+                            </button>
+
+                        </div>
+
+
+                        <!-- =================================
+                             DINHEIRO
+                             ================================= -->
+
+                        <div
+                            id="areaDinheiro"
+                            class="area-pagamento oculto"
+                        >
+
+                            <h3>
+                                Pagamento na entrega
+                            </h3>
+
+                            <p id="textoTroco">
+                                O pagamento será realizado no momento da entrega.
+                            </p>
+
+                        </div>
+
+
+                        <!-- =================================
+                             AÇÕES
+                             ================================= -->
+
+                        <div class="acoes-confirmacao">
+
+                            <a
+                                href="restaurantes.html"
+                                class="btn btn-primario"
+                            >
+                                Fazer novo pedido
+                            </a>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- =====================================
+                         ENTREGA
+                         ===================================== -->
+
+                    <aside class="card entrega-card">
+
+                        <h2>
+                            Entrega
+                        </h2>
+
+
+                        <p class="rotulo">
+                            Cliente
+                        </p>
+
+                        <strong id="nomeCliente">
+                            Carregando...
+                        </strong>
+
+
+                        <p class="rotulo">
+                            Endereço
+                        </p>
+
+                        <p id="enderecoEntrega">
+                            Carregando endereço...
+                        </p>
+
+
+                        <p class="rotulo">
+                            Itens
+                        </p>
+
+                        <strong id="totalItens">
+                            0
+                        </strong>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         RODAPÉ
+         ===================================================== -->
+
+    <footer class="rodape">
+
+        <div class="container">
+
+            <p>
+                StartLampião — Sabor que te conecta.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         SCRIPTS
+         ===================================================== -->
+
+    <script src="../js/storage.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/cliente/confirmacao.js"></script>
+
+</body>
+
+</html>

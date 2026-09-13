@@ -1,0 +1,256 @@
+/* =========================================================
+   STARTLAMPIÃO
+   CADASTRO DO CLIENTE
+   ========================================================= */
+
+body {
+    min-height: 100vh;
+
+    background-color: var(--laranja-claro);
+
+    color: var(--preto);
+}
+
+
+/* =========================================================
+   PÁGINA
+   ========================================================= */
+
+.pagina-cadastro {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.card-cadastro {
+    width: min(100%, 760px);
+
+    padding: 32px;
+
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+
+    background-color: var(--branco);
+
+    box-shadow:
+        0 16px 35px
+        rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   MARCA
+   ========================================================= */
+
+.marca-cadastro {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 28px;
+}
+
+.icone-marca {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background-color: var(--laranja);
+
+    color: var(--preto);
+
+    font-weight: 800;
+}
+
+.marca-cadastro strong {
+    display: block;
+
+    font-size: 1.1rem;
+}
+
+.marca-cadastro span {
+    display: block;
+
+    margin-top: 2px;
+
+    color: var(--cinza);
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.cabecalho-cadastro {
+    margin-bottom: 24px;
+}
+
+.subtitulo {
+    margin-bottom: 6px;
+
+    color: var(--laranja-escuro);
+
+    font-weight: 800;
+}
+
+.cabecalho-cadastro h1 {
+    margin-bottom: 8px;
+
+    font-size: clamp(2rem, 5vw, 2.8rem);
+}
+
+.cabecalho-cadastro p {
+    color: var(--cinza);
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+   ========================================================= */
+
+.formulario {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.campo-completo {
+    grid-column: 1 / -1;
+}
+
+.campo label {
+    font-weight: 700;
+}
+
+.campo input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+
+    background-color: var(--branco);
+
+    color: var(--preto);
+
+    font: inherit;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.campo input:focus {
+    border-color: var(--laranja);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(245, 158, 11, 0.16);
+}
+
+.campo input::placeholder {
+    color: #999999;
+}
+
+.campo small {
+    color: var(--cinza);
+
+    font-size: 0.84rem;
+}
+
+
+/* =========================================================
+   AÇÕES
+   ========================================================= */
+
+.acoes-formulario {
+    grid-column: 1 / -1;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 6px;
+}
+
+.btn-cadastrar,
+.btn-voltar {
+    flex: 1;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   MENSAGEM
+   ========================================================= */
+
+.mensagem {
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .card-cadastro {
+        padding: 24px 18px;
+    }
+
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-completo {
+        grid-column: auto;
+    }
+
+    .acoes-formulario {
+        grid-column: auto;
+
+        flex-direction: column;
+    }
+
+    .btn-cadastrar,
+    .btn-voltar {
+        width: 100%;
+    }
+
+}
