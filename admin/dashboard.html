@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Dashboard administrativo do StartLampião."
+    >
+
+    <title>
+        Dashboard | StartLampião
+    </title>
+
+    <!-- Como estamos dentro da pasta admin,
+         precisamos voltar uma pasta com ../ -->
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/admin.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="layout-admin">
+
+        <!-- =============================================
+             MENU LATERAL
+             ============================================= -->
+
+        <aside class="menu-lateral">
+
+            <div class="marca-admin">
+
+                <div class="logo-admin">
+                    SL
+                </div>
+
+                <div>
+
+                    <strong>
+                        StartLampião
+                    </strong>
+
+                    <span>
+                        Administração
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <nav
+                class="navegacao-admin"
+                aria-label="Menu administrativo"
+            >
+
+                <a
+                    href="dashboard.html"
+                    class="menu-link ativo"
+                >
+                    Dashboard
+                </a>
+
+
+                <a
+                    href="restaurantes.html"
+                    class="menu-link"
+                >
+                    Restaurantes
+                </a>
+
+
+                <a
+                    href="pedidos.html"
+                    class="menu-link"
+                >
+                    Pedidos
+                </a>
+
+
+                <a
+                    href="clientes.html"
+                    class="menu-link"
+                >
+                    Clientes
+                </a>
+
+
+                <a
+                    href="entregadores.html"
+                    class="menu-link"
+                >
+                    Entregadores
+                </a>
+
+
+                <a
+                    href="relatorios.html"
+                    class="menu-link"
+                >
+                    Relatórios
+                </a>
+
+
+                <a
+                    href="configuracoes.html"
+                    class="menu-link"
+                >
+                    Configurações
+                </a>
+
+            </nav>
+
+
+            <button
+                type="button"
+                class="btn-sair"
+                id="btnSair"
+            >
+                Sair
+            </button>
+
+        </aside>
+
+
+        <!-- =============================================
+             ÁREA PRINCIPAL
+             ============================================= -->
+
+        <main class="area-admin">
+
+            <header class="topo-admin">
+
+                <div>
+
+                    <p class="texto-pequeno">
+                        Painel administrativo
+                    </p>
+
+                    <h1>
+                        Dashboard Geral
+                    </h1>
+
+                </div>
+
+
+                <div class="usuario-admin">
+
+                    <div>
+
+                        <span>
+                            Administrador
+                        </span>
+
+                        <strong id="nomeAdministrador">
+                            Carregando...
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =========================================
+                 BOAS-VINDAS
+                 ========================================= -->
+
+            <section class="boas-vindas">
+
+                <div>
+
+                    <p>
+                        Bem-vindo(a),
+                    </p>
+
+                    <h2 id="saudacaoAdministrador">
+                        Administrador
+                    </h2>
+
+                    <span>
+                        Gerencie os restaurantes e acompanhe
+                        as principais informações do StartLampião.
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn btn-primario"
+                    id="btnCadastrarRestaurante"
+                >
+                    + Cadastrar restaurante
+                </button>
+
+            </section>
+
+
+            <!-- =========================================
+                 INDICADORES
+                 ========================================= -->
+
+            <section
+                class="cards-indicadores"
+                aria-label="Indicadores gerais"
+            >
+
+                <article class="card indicador">
+
+                    <span class="indicador-titulo">
+                        Restaurantes
+                    </span>
+
+                    <strong
+                        class="indicador-numero"
+                        id="totalRestaurantes"
+                    >
+                        0
+                    </strong>
+
+                    <small>
+                        cadastrados
+                    </small>
+
+                </article>
+
+
+                <article class="card indicador">
+
+                    <span class="indicador-titulo">
+                        Pedidos
+                    </span>
+
+                    <strong
+                        class="indicador-numero"
+                        id="totalPedidos"
+                    >
+                        0
+                    </strong>
+
+                    <small>
+                        registrados
+                    </small>
+
+                </article>
+
+
+                <article class="card indicador">
+
+                    <span class="indicador-titulo">
+                        Clientes
+                    </span>
+
+                    <strong
+                        class="indicador-numero"
+                        id="totalClientes"
+                    >
+                        0
+                    </strong>
+
+                    <small>
+                        cadastrados
+                    </small>
+
+                </article>
+
+
+                <article class="card indicador">
+
+                    <span class="indicador-titulo">
+                        Entregadores
+                    </span>
+
+                    <strong
+                        class="indicador-numero"
+                        id="totalEntregadores"
+                    >
+                        0
+                    </strong>
+
+                    <small>
+                        cadastrados
+                    </small>
+
+                </article>
+
+            </section>
+
+
+            <!-- =========================================
+                 RESTAURANTES RECENTES
+                 ========================================= -->
+
+            <section class="card secao-dashboard">
+
+                <div class="cabecalho-secao">
+
+                    <div>
+
+                        <h2>
+                            Restaurantes recentes
+                        </h2>
+
+                        <p>
+                            Últimos estabelecimentos cadastrados.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="restaurantes.html"
+                        class="link-destaque"
+                    >
+                        Ver restaurantes
+                    </a>
+
+                </div>
+
+
+                <div
+                    id="listaRestaurantesRecentes"
+                    class="lista-vazia"
+                >
+
+                    Nenhum restaurante cadastrado ainda.
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================================
+                 PEDIDOS RECENTES
+                 ========================================= -->
+
+            <section class="card secao-dashboard">
+
+                <div class="cabecalho-secao">
+
+                    <div>
+
+                        <h2>
+                            Pedidos recentes
+                        </h2>
+
+                        <p>
+                            Últimos pedidos registrados no sistema.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="pedidos.html"
+                        class="link-destaque"
+                    >
+                        Ver pedidos
+                    </a>
+
+                </div>
+
+
+                <div
+                    id="listaPedidosRecentes"
+                    class="lista-vazia"
+                >
+
+                    Nenhum pedido registrado ainda.
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =============================================
+         ORDEM DOS SCRIPTS
+         ============================================= -->
+
+    <script src="../js/storage.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/admin/dashboard.js"></script>
+
+</body>
+
+</html>
