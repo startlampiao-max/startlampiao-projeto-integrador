@@ -20,6 +20,7 @@ const usuariosRoutes =
 
 const restaurantesRoutes =
     require("./routes/restaurantes.routes");
+const produtosRoutes = require("./routes/produtos.routes");
 
 /* =========================================================
    APLICAÇÃO
@@ -51,6 +52,7 @@ app.use(
     "/restaurantes",
     restaurantesRoutes
 );
+app.use("/produtos", produtosRoutes);
 
 /* =========================================================
    ROTA INICIAL
