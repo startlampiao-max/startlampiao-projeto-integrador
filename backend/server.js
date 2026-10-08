@@ -15,11 +15,17 @@ const banco = require("./config/database");
    ROTAS
 ========================================================= */
 
+// API de usuários
 const usuariosRoutes =
     require("./routes/usuarios.routes");
 
+// API de restaurantes
 const restaurantesRoutes =
     require("./routes/restaurantes.routes");
+
+// API 05 - Gerenciamento de categorias
+const categoriasRoutes =
+    require("./routes/categorias.routes");
 
 /* =========================================================
    APLICAÇÃO
@@ -42,14 +48,22 @@ app.use(express.json());
    REGISTRO DAS ROTAS
 ========================================================= */
 
+// Rotas de usuários
 app.use(
     "/usuarios",
     usuariosRoutes
 );
 
+// Rotas de restaurantes
 app.use(
     "/restaurantes",
     restaurantesRoutes
+);
+
+// API 05 - Categorias
+app.use(
+    "/categorias",
+    categoriasRoutes
 );
 
 /* =========================================================
