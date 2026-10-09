@@ -3,6 +3,7 @@
 /* =========================================================
    STARTLAMPIÃO
    BACK-END - SERVIDOR PRINCIPAL
+   PROJETO INTEGRADOR II - ENTREGA 3
 ========================================================= */
 
 const express = require("express");
@@ -15,11 +16,17 @@ const banco = require("./config/database");
    ROTAS
 ========================================================= */
 
+// API 01 e 02 - Cadastro, login e autenticação
 const usuariosRoutes =
     require("./routes/usuarios.routes");
 
+// Rotas de restaurantes
 const restaurantesRoutes =
     require("./routes/restaurantes.routes");
+
+// API 07 - Gerenciamento de pedidos
+const pedidosRoutes =
+    require("./routes/pedidos.routes");
 
 /* =========================================================
    APLICAÇÃO
@@ -27,8 +34,7 @@ const restaurantesRoutes =
 
 const app = express();
 
-const PORT =
-    process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 /* =========================================================
    MIDDLEWARES
@@ -42,14 +48,22 @@ app.use(express.json());
    REGISTRO DAS ROTAS
 ========================================================= */
 
+// Usuários
 app.use(
     "/usuarios",
     usuariosRoutes
 );
 
+// Restaurantes
 app.use(
     "/restaurantes",
     restaurantesRoutes
+);
+
+// Pedidos - API 07
+app.use(
+    "/pedidos",
+    pedidosRoutes
 );
 
 /* =========================================================
@@ -60,14 +74,13 @@ app.get("/", (req, res) => {
 
     res.json({
         sucesso: true,
-        mensagem:
-            "API StartLampião funcionando!"
+        mensagem: "API StartLampião funcionando!"
     });
 
 });
 
 /* =========================================================
-   TESTE DE CONEXÃO COM O BANCO
+   TESTE DE CONEXÃO COM O BANCO DE DADOS
 ========================================================= */
 
 async function testarBanco() {
