@@ -24,7 +24,11 @@ const usuariosRoutes =
 const restaurantesRoutes =
     require("./routes/restaurantes.routes");
 
-// API 07 - Gerenciamento de pedidos
+// API 05 - Gerenciamento de categorias (Robson)
+const categoriasRoutes =
+    require("./routes/categorias.routes");
+
+// API 07 e 08 - Pedidos e atualização de status (Eudes)
 const pedidosRoutes =
     require("./routes/pedidos.routes");
 
@@ -60,7 +64,13 @@ app.use(
     restaurantesRoutes
 );
 
-// Pedidos - API 07
+// API 05 - Categorias
+app.use(
+    "/categorias",
+    categoriasRoutes
+);
+
+// API 07 e 08 - Pedidos
 app.use(
     "/pedidos",
     pedidosRoutes
