@@ -3,6 +3,7 @@
 /* =========================================================
    STARTLAMPIÃO
    BACK-END - SERVIDOR PRINCIPAL
+   PROJETO INTEGRADOR II - ENTREGA 3
 ========================================================= */
 
 const express = require("express");
@@ -15,17 +16,21 @@ const banco = require("./config/database");
    ROTAS
 ========================================================= */
 
-// API de usuários
+// API 01 e 02 - Cadastro, login e autenticação
 const usuariosRoutes =
     require("./routes/usuarios.routes");
 
-// API de restaurantes
+// Rotas de restaurantes
 const restaurantesRoutes =
     require("./routes/restaurantes.routes");
 
-// API 05 - Gerenciamento de categorias
+// API 05 - Gerenciamento de categorias (Robson)
 const categoriasRoutes =
     require("./routes/categorias.routes");
+
+// API 07 e 08 - Pedidos e atualização de status (Eudes)
+const pedidosRoutes =
+    require("./routes/pedidos.routes");
 
 /* =========================================================
    APLICAÇÃO
@@ -33,8 +38,7 @@ const categoriasRoutes =
 
 const app = express();
 
-const PORT =
-    process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 /* =========================================================
    MIDDLEWARES
@@ -48,13 +52,13 @@ app.use(express.json());
    REGISTRO DAS ROTAS
 ========================================================= */
 
-// Rotas de usuários
+// Usuários
 app.use(
     "/usuarios",
     usuariosRoutes
 );
 
-// Rotas de restaurantes
+// Restaurantes
 app.use(
     "/restaurantes",
     restaurantesRoutes
@@ -66,6 +70,12 @@ app.use(
     categoriasRoutes
 );
 
+// API 07 e 08 - Pedidos
+app.use(
+    "/pedidos",
+    pedidosRoutes
+);
+
 /* =========================================================
    ROTA INICIAL
 ========================================================= */
@@ -74,14 +84,13 @@ app.get("/", (req, res) => {
 
     res.json({
         sucesso: true,
-        mensagem:
-            "API StartLampião funcionando!"
+        mensagem: "API StartLampião funcionando!"
     });
 
 });
 
 /* =========================================================
-   TESTE DE CONEXÃO COM O BANCO
+   TESTE DE CONEXÃO COM O BANCO DE DADOS
 ========================================================= */
 
 async function testarBanco() {
