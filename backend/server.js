@@ -23,6 +23,7 @@ const usuariosRoutes =
 // Rotas de restaurantes
 const restaurantesRoutes =
     require("./routes/restaurantes.routes");
+const produtosRoutes = require("./routes/produtos.routes");
 
 // API 05 - Gerenciamento de categorias (Robson)
 const categoriasRoutes =
@@ -63,6 +64,7 @@ app.use(
     "/restaurantes",
     restaurantesRoutes
 );
+app.use("/produtos", produtosRoutes);
 
 // API 05 - Categorias
 app.use(
